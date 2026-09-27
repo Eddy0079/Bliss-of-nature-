@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e3a5f" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="mistGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.25" />
+    </linearGradient>
+    <linearGradient id="cardShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.1" />
+      <stop offset="60%" stop-color="#000000" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.85" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1920" height="1080" fill="url(#skyGrad)" />
+  
+  <!-- Sun / Moon Glow -->
+  <circle cx="1440" cy="324" r="194" fill="#ffffff" opacity="0.3" filter="blur(20px)" />
+  <circle cx="1440" cy="324" r="86" fill="#fffbeb" opacity="0.85" />
+
+  <!-- Far Distant Snowy Peaks -->
+  <polygon points="0,648 384,345 768,626 1248,302 1632,561 1920,410 1920,1080 0,1080" fill="#1e293b" opacity="0.85" />
+  
+  <!-- Snow caps -->
+  <polygon points="288,432 384,345 499,453 422,432 345,453" fill="#ffffff" opacity="0.9" />
+  <polygon points="1152,388 1248,302 1382,410 1305,378 1209,410" fill="#ffffff" opacity="0.9" />
+
+  <!-- Mid Ridge with Misty Atmospheric Layer -->
+  <path d="M0,594 Q576,486 1056,626 T1920,561 L1920,1080 L0,1080 Z" fill="#064e3b" opacity="0.8" />
+  <rect y="486" width="1920" height="270" fill="url(#mistGrad)" />
+
+  <!-- Pine Tree Ridge & Silhouettes -->
+  <g fill="#064e3b">
+    <!-- Trees left to right -->
+    <polygon points="0,810 25,626 50,810" /><polygon points="40,810 65,626 90,810" /><polygon points="80,810 105,626 130,810" /><polygon points="120,810 145,626 170,810" /><polygon points="160,810 185,626 210,810" /><polygon points="200,810 225,626 250,810" /><polygon points="240,810 265,626 290,810" /><polygon points="280,810 305,626 330,810" /><polygon points="320,810 345,626 370,810" /><polygon points="360,810 385,626 410,810" /><polygon points="400,810 425,626 450,810" /><polygon points="440,810 465,626 490,810" /><polygon points="480,810 505,626 530,810" /><polygon points="520,810 545,626 570,810" /><polygon points="560,810 585,626 610,810" /><polygon points="600,810 625,626 650,810" /><polygon points="640,810 665,626 690,810" /><polygon points="680,810 705,626 730,810" /><polygon points="720,810 745,626 770,810" /><polygon points="760,810 785,626 810,810" /><polygon points="800,810 825,626 850,810" /><polygon points="840,810 865,626 890,810" /><polygon points="880,810 905,626 930,810" /><polygon points="920,810 945,626 970,810" /><polygon points="960,810 985,626 1010,810" /><polygon points="1000,810 1025,626 1050,810" /><polygon points="1040,810 1065,626 1090,810" /><polygon points="1080,810 1105,626 1130,810" /><polygon points="1120,810 1145,626 1170,810" /><polygon points="1160,810 1185,626 1210,810" /><polygon points="1200,810 1225,626 1250,810" /><polygon points="1240,810 1265,626 1290,810" /><polygon points="1280,810 1305,626 1330,810" /><polygon points="1320,810 1345,626 1370,810" /><polygon points="1360,810 1385,626 1410,810" /><polygon points="1400,810 1425,626 1450,810" /><polygon points="1440,810 1465,626 1490,810" /><polygon points="1480,810 1505,626 1530,810" /><polygon points="1520,810 1545,626 1570,810" /><polygon points="1560,810 1585,626 1610,810" /><polygon points="1600,810 1625,626 1650,810" /><polygon points="1640,810 1665,626 1690,810" /><polygon points="1680,810 1705,626 1730,810" /><polygon points="1720,810 1745,626 1770,810" /><polygon points="1760,810 1785,626 1810,810" /><polygon points="1800,810 1825,626 1850,810" /><polygon points="1840,810 1865,626 1890,810" /><polygon points="1880,810 1905,626 1930,810" />
+  </g>
+
+  <!-- Foreground Hill / Resort Terrace Deck -->
+  <path d="M0,777 Q768,702 1920,820 L1920,1080 L0,1080 Z" fill="#064e3b" />
+
+  <!-- Wooden Resort Cottage Silhouette with Warm Glowing Windows -->
+  <g transform="translate(230, 669)">
+    <!-- Cottage Roof -->
+    <polygon points="0,50 80,0 160,50" fill="#292524" />
+    <rect x="15" y="50" width="130" height="70" fill="#44403c" />
+    <!-- Warm Lit Windows -->
+    <rect x="30" y="65" width="30" height="35" rx="3" fill="#fef08a" opacity="0.95" />
+    <rect x="70" y="65" width="30" height="35" rx="3" fill="#fef08a" opacity="0.95" />
+    <rect x="110" y="70" width="22" height="50" rx="2" fill="#78350f" />
+    <!-- Porch Railing -->
+    <line x1="5" y1="110" x2="155" y2="110" stroke="#a8a29e" stroke-width="3" />
+    <!-- Balcony Warm Glow -->
+    <circle cx="45" cy="82" r="14" fill="#fbbf24" opacity="0.4" />
+    <circle cx="85" cy="82" r="14" fill="#fbbf24" opacity="0.4" />
+  </g>
+
+  <!-- Vignette Gradient for Crisp Legible Text -->
+  <rect width="1920" height="1080" fill="url(#cardShadow)" />
+
+  <!-- Typography Overlay -->
+  <text x="115" y="885" font-family="'Playfair Display', Georgia, serif" font-size="72" font-weight="700" fill="#ffffff" letter-spacing="1.5">KANATAL & UTTARAKHAND ESCAPES</text>
+  <text x="115" y="961" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="32" font-weight="600" fill="#facc15" letter-spacing="2.5">Bliss of Nature Resort · 8,500 Ft Above Sea Level</text>
+  <text x="115" y="1015" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="23" font-weight="500" fill="#e2e8f0" letter-spacing="1">BON HOLIDAYS · HANDPICKED UTTARAKHAND EXPERIENCES</text>
+</svg>

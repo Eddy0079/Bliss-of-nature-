@@ -219,26 +219,26 @@ export const RESORTS_DATA: Resort[] = [
 
 export const HOLIDAY_PACKAGES: HolidayPackage[] = [
   {
-    id: 'rishikesh-escape',
-    title: 'Rishikesh Escape',
-    tagline: 'River thrills, spiritual solace, and luxury retreat living',
-    destination: 'Rishikesh & Mohanchatti Valley',
+    id: 'bliss-of-nature-package',
+    title: 'Bliss of Nature Resort Package',
+    tagline: 'River thrills, spiritual solace, and luxury eco-retreat living in Rishikesh',
+    destination: 'Bliss of Nature Resort, Rishikesh, Uttarakhand',
     durationDays: 3,
     durationNights: 2,
     durationText: '3 Days / 2 Nights',
     startingPrice: 11999,
     rating: 4.9,
     reviewsCount: 182,
-    heroImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80'
     ],
-    overview: 'The quintessential Uttarakhand weekend retreat. Stay at the prestigious Bliss of Nature Resort, conquer the thrilling Grade III rapids of the Holy Ganges, witness the sacred evening Ganga Aarti at Triveni Ghat, and revitalize with sunrise yoga.',
+    overview: 'The quintessential Uttarakhand escape at Bliss of Nature Resort in Rishikesh. Unwind in handcrafted teak cottages, conquer the thrilling Grade III rapids of the holy Ganges, experience evening Ganga Aarti at Triveni Ghat, and revitalize with daily sunrise yoga at our riverside shala.',
     highlights: [
       '2 Nights Luxury Stay at Bliss of Nature Resort (Rishikesh)',
-      '16 km White Water River Rafting with Certified River Captains',
+      '16 km Ganges White Water Rafting with Certified River Captains',
       'VIP Reserved Experience at Triveni Ghat Evening Ganga Aarti',
       'Daily Sunrise Himalayan Yoga & Sound Bath Healing Session',
       'All Gourmet Breakfasts and Candlelit Buffet Dinners Included',
@@ -289,235 +289,7 @@ export const HOLIDAY_PACKAGES: HolidayPackage[] = [
     transportation: 'Private AC Toyota Innova / Urbania throughout',
     faqs: [
       { question: 'Is white water rafting safe for beginners?', answer: 'Yes! Our rafting partners are certified by the Uttarakhand Tourism Board with international safety gear and certified river guides. A short training briefing is given before launch.' },
-      { question: 'Can I extend my stay or upgrade my room?', answer: 'Absolutely. During booking, you can choose to upgrade to the Riverside Stone Villa or Himalayan Master Suite, or add extra nights at discounted package rates.' }
-    ]
-  },
-  {
-    id: 'rishikesh-mussoorie',
-    title: 'Rishikesh & Mussoorie Twin Getaway',
-    tagline: 'From holy river waters to colonial pine hilltops',
-    destination: 'Rishikesh & Mussoorie',
-    durationDays: 5,
-    durationNights: 4,
-    durationText: '5 Days / 4 Nights',
-    startingPrice: 24500,
-    rating: 4.9,
-    reviewsCount: 138,
-    heroImage: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80'
-    ],
-    overview: 'Experience the duality of Uttarakhand: the spiritual, active energy of Rishikesh followed by the cool colonial tranquility and misty pine ridges of Mussoorie.',
-    highlights: [
-      '2 Nights at Bliss of Nature (Rishikesh) + 2 Nights at Himalayan Pine Chalet (Mussoorie)',
-      'Ganges River Rafting & Laxman Jhula Cultural Exploration',
-      'Scenic Mountain Drive via Dehradun Valley & Malsi Foothills',
-      'George Everest Peak Excursion & Panoramic Himalayan Viewpoint',
-      'Mall Road & Landour Heritage Bakehouse High-Tea Experience'
-    ],
-    itinerary: [
-      {
-        day: 1,
-        title: 'Welcome to Rishikesh',
-        highlights: 'Check-in to Bliss of Nature Resort, wellness orientation, and campfire dinner.',
-        description: 'Pick up from Dehradun airport and check-in to Bliss of Nature Resort. Unwind in nature.',
-        mealsIncluded: 'Dinner',
-        stayLocation: 'Bliss of Nature Resort, Rishikesh'
-      },
-      {
-        day: 2,
-        title: 'River Rapids & Spiritual Sunset',
-        highlights: 'Ganges river rafting, Beatles Ashram, and evening Triveni Aarti.',
-        description: 'Thrilling morning rafting followed by afternoon culture and evening Ganga Aarti.',
-        mealsIncluded: 'Breakfast, Dinner',
-        stayLocation: 'Bliss of Nature Resort, Rishikesh'
-      },
-      {
-        day: 3,
-        title: 'Scenic Drive into the Queen of Hills',
-        highlights: 'Drive to Mussoorie (7,000 ft), check-in to Himalayan Pine Chalet, sunset over Doon valley.',
-        description: 'Ascend through pine winding roads. Arrive at our heritage chalet and enjoy evening high tea.',
-        mealsIncluded: 'Breakfast, Dinner',
-        stayLocation: 'Himalayan Pine Chalet, Mussoorie'
-      },
-      {
-        day: 4,
-        title: 'Landour, George Everest Peak & Heritage Walks',
-        highlights: 'Char Dukan, historic Landour church, and sunset at George Everest house.',
-        description: 'Discover the old-world charm of Landour, taste famous apple pies, and hike to George Everest peak.',
-        mealsIncluded: 'Breakfast, Dinner',
-        stayLocation: 'Himalayan Pine Chalet, Mussoorie'
-      },
-      {
-        day: 5,
-        title: 'Farewell Uttarakhand',
-        highlights: 'Leisurely mountain breakfast & drop to Dehradun Airport/Railway.',
-        description: 'Enjoy fresh bakery breakfast before your private transfer to Dehradun.',
-        mealsIncluded: 'Breakfast',
-        stayLocation: 'Departure'
-      }
-    ],
-    inclusions: ['4 nights boutique stay', 'Daily gourmet breakfasts and dinners', 'All private sightseeing & transfers', 'River rafting package', 'Landour heritage walk'],
-    exclusions: ['Airfare/train', 'Personal purchases', 'Lunches unless specified'],
-    accommodationType: 'Handpicked Nature Resorts & Heritage Chalets',
-    transportation: 'Dedicated Chauffeur-driven AC Innova Crysta',
-    faqs: [
-      { question: 'What is the best time of year for this package?', answer: 'March to June offers pleasant weather; September to November has crystal clear Himalayan mountain views.' }
-    ]
-  },
-  {
-    id: 'uttarakhand-explorer',
-    title: 'Uttarakhand Explorer Grand Circuit',
-    tagline: 'The ultimate 7-day Himalayan odyssey across lakes, rivers & peaks',
-    destination: 'Rishikesh · Haridwar · Tehri Lake · Kanatal · Mussoorie',
-    durationDays: 7,
-    durationNights: 6,
-    durationText: '7 Days / 6 Nights',
-    startingPrice: 38900,
-    rating: 5.0,
-    reviewsCount: 96,
-    heroImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80'
-    ],
-    overview: 'A masterfully curated week spanning the very best landscapes of Garhwal. From the holy banks of the Ganges in Rishikesh and Haridwar to the emerald waters of Tehri Dam, the snow peaks of Kanatal, and the colonial hillscapes of Mussoorie.',
-    highlights: [
-      '6 Nights across handpicked BON Holidays luxury partner stays',
-      'Exclusive Speedboat Cruise & Water Sports on Tehri Lake',
-      'Surkanda Devi Peak Cable Car & Himalayan Panoramas',
-      'Har Ki Pauri Sacred Evening Ceremony & Rishikesh Adventure',
-      'Dedicated Travel Concierge & Premium SUV throughout the trip'
-    ],
-    itinerary: [
-      {
-        day: 1,
-        title: 'Sacred Haridwar & Rishikesh Arrival',
-        highlights: 'Har Ki Pauri visit, transition to Rishikesh foothills, stay at Bliss of Nature.',
-        description: 'Witness the ancient spiritual energy of Haridwar before heading to Bliss of Nature Resort in Rishikesh.',
-        mealsIncluded: 'Dinner',
-        stayLocation: 'Bliss of Nature Resort'
-      },
-      {
-        day: 2,
-        title: 'Adventures on the Holy River',
-        highlights: 'White water rafting, cliff diving, Beatles ashram, and Ganga Aarti.',
-        description: 'Immerse yourself in Rishikesh thrills and timeless spiritual traditions.',
-        mealsIncluded: 'Breakfast, Dinner',
-        stayLocation: 'Bliss of Nature Resort'
-      },
-      {
-        day: 3,
-        title: 'Tehri Lake & Water Sports',
-        highlights: 'Scenic drive to Tehri reservoir, jet ski, speed boat ride, night at lakeview resort.',
-        description: 'Discover Asia’s largest man-made lake with turquoise water sports and magnificent vistas.',
-        mealsIncluded: 'Breakfast, Dinner',
-        stayLocation: 'Tehri Heights Retreat'
-      },
-      {
-        day: 4,
-        title: 'Kanatal Alpine Sanctuary',
-        highlights: 'High-altitude deodar forest hike, Kaudia jungle safari, night at Riverstone Lodge.',
-        description: 'Reach 8,500 ft elevation with panoramic views of snow-covered Himalayan giants.',
-        mealsIncluded: 'Breakfast, Dinner',
-        stayLocation: 'Riverstone Wilderness Lodge'
-      },
-      {
-        day: 5,
-        title: 'Surkanda Devi & Queen of Hills',
-        highlights: 'Ropeway to Surkanda Devi temple, scenic route to Mussoorie, evening at Mall Road.',
-        description: 'Ascend to the sacred high temple before descending into romantic Mussoorie.',
-        mealsIncluded: 'Breakfast, Dinner',
-        stayLocation: 'Himalayan Pine Chalet'
-      },
-      {
-        day: 6,
-        title: 'Landour & George Everest Hike',
-        highlights: 'Old British Landour, sunset trek at George Everest, farewell banquet.',
-        description: 'Explore charming colonial pathways and watch the golden sunset sink into the Doon horizon.',
-        mealsIncluded: 'Breakfast, Dinner',
-        stayLocation: 'Himalayan Pine Chalet'
-      },
-      {
-        day: 7,
-        title: 'Departure via Dehradun Valley',
-        highlights: 'Leisurely brunch and private airport/railway transfer.',
-        description: 'Bid goodbye to the Himalayas with lifetime memories and handcrafted souvenirs.',
-        mealsIncluded: 'Breakfast',
-        stayLocation: 'Departure'
-      }
-    ],
-    inclusions: ['6 nights premium accommodations', 'Breakfasts & Dinners', 'All transfers in Toyota Fortuner/Innova Crysta', 'Tehri Lake boat ride', 'Rafting package', 'Concierge support'],
-    exclusions: ['Airfare', 'Personal shopping', 'Adventure video packages'],
-    accommodationType: 'Luxury Boutique Stays & Eco-Lodges',
-    transportation: 'Dedicated Toyota Innova Crysta / Fortuner',
-    faqs: [
-      { question: 'Is this itinerary suitable for senior citizens and families?', answer: 'Yes, the itinerary is paced with moderate driving times and comfortable walking options.' }
-    ]
-  },
-  {
-    id: 'chopta-tungnath-trek',
-    title: 'Chopta & Tungnath Himalayan Expedition',
-    tagline: 'Trek to the highest Shiva temple on earth and Chandrashila Peak',
-    destination: 'Chopta · Tungnath · Chandrashila · Deoriatal',
-    durationDays: 4,
-    durationNights: 3,
-    durationText: '4 Days / 3 Nights',
-    startingPrice: 16500,
-    rating: 4.9,
-    reviewsCount: 74,
-    heroImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80'
-    ],
-    overview: 'Known as the "Mini Switzerland of Uttarakhand", Chopta is an alpine meadow paradise. Trek up to Tungnath (12,073 ft) and the summit of Chandrashila (13,123 ft) for 360-degree views of Nanda Devi, Trishul, and Chaukhamba.',
-    highlights: [
-      'Trek to 1,000-year-old Tungnath Temple and Chandrashila Peak',
-      'Camp beside the crystalline waters of Deoriatal Lake',
-      'Witness dramatic sunrise over Chaukhamba mountain massif',
-      'Comfortable glamping in luxury Swiss alpine domes'
-    ],
-    itinerary: [
-      {
-        day: 1,
-        title: 'Rishikesh to Chopta Alpine Meadow',
-        highlights: 'Drive along Alaknanda and Mandakini river confluences (Devprayag & Rudraprayag).',
-        description: 'Scenic journey through holy confluences reaching the high alpine meadows of Chopta.',
-        mealsIncluded: 'Dinner',
-        stayLocation: 'Chopta Alpine Eco Camp'
-      },
-      {
-        day: 2,
-        title: 'Summit Day: Tungnath & Chandrashila',
-        highlights: 'Early morning climb to Tungnath Temple and panoramic 13,000 ft summit.',
-        description: 'Stunning sunrise over the Great Himalayan Range with crisp alpine air.',
-        mealsIncluded: 'Breakfast, Packed Lunch, Dinner',
-        stayLocation: 'Chopta Alpine Eco Camp'
-      },
-      {
-        day: 3,
-        title: 'Deoriatal Emerald Lake Trek',
-        highlights: 'Reflection of Chaukhamba peaks in tranquil high-altitude waters.',
-        description: 'Trek through lush rhododendron forests to the mythological lake of Deoriatal.',
-        mealsIncluded: 'Breakfast, Dinner',
-        stayLocation: 'Sari Village Eco Lodge'
-      },
-      {
-        day: 4,
-        title: 'Return to Rishikesh Foothills',
-        highlights: 'Downhill scenic return drive with stops at Devprayag.',
-        description: 'Arrive back in Rishikesh for onward journey or continuation at Bliss of Nature.',
-        mealsIncluded: 'Breakfast',
-        stayLocation: 'Departure'
-      }
-    ],
-    inclusions: ['3 Nights stay in luxury alpine tents/lodges', 'All meals', 'Certified mountain trekking guide', 'Trek permits and safety gear', 'Private transport from Rishikesh'],
-    exclusions: ['Pony/porter hire for personal backpacks', 'Personal gear'],
-    accommodationType: 'Swiss Alpine Luxury Tents & Mountain Lodges',
-    transportation: 'Private 4x4 / AC Tempo Traveler',
-    faqs: [
-      { question: 'What fitness level is required?', answer: 'Moderate fitness. The trek from Chopta to Tungnath is 3.5 km on a paved stone trail, and Chandrashila is an additional 1.5 km climb.' }
+      { question: 'Can I extend my stay or upgrade my room at Bliss of Nature?', answer: 'Absolutely. During booking, you can choose to upgrade to the Riverside Stone Villa or Himalayan Master Suite, or add extra nights at discounted package rates.' }
     ]
   }
 ];

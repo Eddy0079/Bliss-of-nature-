@@ -262,7 +262,7 @@ Please confirm availability and booking procedure.`
                   type="button"
                   onClick={() => {
                     setItemType('package');
-                    setSelectedItemId(packages[0]?.id || 'rishikesh-escape');
+                    setSelectedItemId(packages[0]?.id || 'bliss-of-nature-package');
                   }}
                   className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-colors cursor-pointer ${
                     itemType === 'package'

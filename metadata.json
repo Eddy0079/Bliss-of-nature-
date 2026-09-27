@@ -1,6 +1,6 @@
 {
-  "name": "BON Holidays - Luxury Stays & Uttarakhand Packages",
-  "description": "Stay. Explore. Experience. Premium nature resorts, Bliss of Nature retreat in Rishikesh, curated Uttarakhand holiday packages and unforgettable Himalayan experiences.",
+  "name": "BON Holidays - Premium Stays & Uttarakhand Packages",
+  "description": "Discover comfortable stays, majestic nature resorts including Bliss of Nature in Kanatal, curated holiday packages, and memorable Himalayan experiences with BON Holidays.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

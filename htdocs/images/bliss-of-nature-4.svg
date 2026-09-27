@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="mistGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.25" />
+    </linearGradient>
+    <linearGradient id="cardShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.1" />
+      <stop offset="60%" stop-color="#000000" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.85" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="800" fill="url(#skyGrad)" />
+  
+  <!-- Sun / Moon Glow -->
+  <circle cx="900" cy="240" r="144" fill="#ffffff" opacity="0.3" filter="blur(20px)" />
+  <circle cx="900" cy="240" r="64" fill="#fffbeb" opacity="0.85" />
+
+  <!-- Far Distant Snowy Peaks -->
+  <polygon points="0,480 240,256 480,463 780,224 1020,416 1200,304 1200,800 0,800" fill="#09090b" opacity="0.85" />
+  
+  <!-- Snow caps -->
+  <polygon points="180,320 240,256 312,336 264,320 216,336" fill="#ffffff" opacity="0.9" />
+  <polygon points="720,288 780,224 864,304 816,280 756,304" fill="#ffffff" opacity="0.9" />
+
+  <!-- Mid Ridge with Misty Atmospheric Layer -->
+  <path d="M0,440 Q360,360 660,463 T1200,416 L1200,800 L0,800 Z" fill="#18181b" opacity="0.8" />
+  <rect y="360" width="1200" height="200" fill="url(#mistGrad)" />
+
+  <!-- Pine Tree Ridge & Silhouettes -->
+  <g fill="#18181b">
+    <!-- Trees left to right -->
+    <polygon points="0,600 25,463 50,600" /><polygon points="40,600 65,463 90,600" /><polygon points="80,600 105,463 130,600" /><polygon points="120,600 145,463 170,600" /><polygon points="160,600 185,463 210,600" /><polygon points="200,600 225,463 250,600" /><polygon points="240,600 265,463 290,600" /><polygon points="280,600 305,463 330,600" /><polygon points="320,600 345,463 370,600" /><polygon points="360,600 385,463 410,600" /><polygon points="400,600 425,463 450,600" /><polygon points="440,600 465,463 490,600" /><polygon points="480,600 505,463 530,600" /><polygon points="520,600 545,463 570,600" /><polygon points="560,600 585,463 610,600" /><polygon points="600,600 625,463 650,600" /><polygon points="640,600 665,463 690,600" /><polygon points="680,600 705,463 730,600" /><polygon points="720,600 745,463 770,600" /><polygon points="760,600 785,463 810,600" /><polygon points="800,600 825,463 850,600" /><polygon points="840,600 865,463 890,600" /><polygon points="880,600 905,463 930,600" /><polygon points="920,600 945,463 970,600" /><polygon points="960,600 985,463 1010,600" /><polygon points="1000,600 1025,463 1050,600" /><polygon points="1040,600 1065,463 1090,600" /><polygon points="1080,600 1105,463 1130,600" /><polygon points="1120,600 1145,463 1170,600" /><polygon points="1160,600 1185,463 1210,600" />
+  </g>
+
+  <!-- Foreground Hill / Resort Terrace Deck -->
+  <path d="M0,576 Q480,520 1200,608 L1200,800 L0,800 Z" fill="#18181b" />
+
+  <!-- Wooden Resort Cottage Silhouette with Warm Glowing Windows -->
+  <g transform="translate(144, 496)">
+    <!-- Cottage Roof -->
+    <polygon points="0,50 80,0 160,50" fill="#292524" />
+    <rect x="15" y="50" width="130" height="70" fill="#44403c" />
+    <!-- Warm Lit Windows -->
+    <rect x="30" y="65" width="30" height="35" rx="3" fill="#fef08a" opacity="0.95" />
+    <rect x="70" y="65" width="30" height="35" rx="3" fill="#fef08a" opacity="0.95" />
+    <rect x="110" y="70" width="22" height="50" rx="2" fill="#78350f" />
+    <!-- Porch Railing -->
+    <line x1="5" y1="110" x2="155" y2="110" stroke="#a8a29e" stroke-width="3" />
+    <!-- Balcony Warm Glow -->
+    <circle cx="45" cy="82" r="14" fill="#fbbf24" opacity="0.4" />
+    <circle cx="85" cy="82" r="14" fill="#fbbf24" opacity="0.4" />
+  </g>
+
+  <!-- Vignette Gradient for Crisp Legible Text -->
+  <rect width="1200" height="800" fill="url(#cardShadow)" />
+
+  <!-- Typography Overlay -->
+  <text x="72" y="656" font-family="'Playfair Display', Georgia, serif" font-size="45" font-weight="700" fill="#ffffff" letter-spacing="1.5">STARGAZING & EVENING BONFIRES</text>
+  <text x="72" y="712" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="600" fill="#facc15" letter-spacing="2.5">Live Music · Deodar Forest Lawn · Barbeque</text>
+  <text x="72" y="752" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="500" fill="#e2e8f0" letter-spacing="1">BON HOLIDAYS · HANDPICKED UTTARAKHAND EXPERIENCES</text>
+</svg>

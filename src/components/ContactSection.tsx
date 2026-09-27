@@ -291,7 +291,7 @@ export const ContactSection: React.FC = () => {
                       className="w-full bg-[#F5F7F6] border border-neutral-200 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-[#17231F] focus:outline-none focus:ring-2 focus:ring-[#16745A]"
                     >
                       <option value="Bliss of Nature Resort">Bliss of Nature Resort Stay</option>
-                      <option value="Holiday Packages">Holiday Packages (3D/2N to 7D/6N)</option>
+                      <option value="Bliss of Nature Resort Package">Bliss of Nature Resort Package (3D/2N)</option>
                       <option value="White Water River Rafting">River Rafting & Camping</option>
                       <option value="Corporate / Group Retreat">Corporate / Group Retreat</option>
                       <option value="Customized Trip">Customized Uttarakhand Trip</option>

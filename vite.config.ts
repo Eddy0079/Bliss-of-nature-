@@ -1,22 +1,28 @@
-import tailwindcss from '@tailwindcss/vite';
-import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig} from 'vite';
+import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
-    plugins: [react(), tailwindcss()],
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, '.'),
-      },
-    },
+    root: 'htdocs',
     server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modify—file watching is disabled to prevent flickering during agent edits.
+      port: 3000,
+      host: '0.0.0.0',
       hmr: process.env.DISABLE_HMR !== 'true',
-      // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
+    },
+    build: {
+      outDir: '../dist',
+      emptyOutDir: true,
+      rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, 'htdocs/index.html'),
+          about: path.resolve(__dirname, 'htdocs/about.html'),
+          resorts: path.resolve(__dirname, 'htdocs/resorts.html'),
+          packages: path.resolve(__dirname, 'htdocs/packages.html'),
+          gallery: path.resolve(__dirname, 'htdocs/gallery.html'),
+          contact: path.resolve(__dirname, 'htdocs/contact.html'),
+        },
+      },
     },
   };
 });

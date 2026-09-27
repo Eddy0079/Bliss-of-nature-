@@ -18,6 +18,8 @@ import {
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { FeaturedResort } from './components/FeaturedResort';
+import { HomeCuratedHighlights } from './components/HomeCuratedHighlights';
+import { CtaContactSection } from './components/CtaContactSection';
 import { ResortsSection } from './components/ResortsSection';
 import { PackagesSection } from './components/PackagesSection';
 import { ExperiencesSection } from './components/ExperiencesSection';
@@ -40,7 +42,7 @@ import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageView>('home');
-  const [selectedPackageId, setSelectedPackageId] = useState<string>('rishikesh-escape');
+  const [selectedPackageId, setSelectedPackageId] = useState<string>('bliss-of-nature-package');
   
   // Booking Modal State
   const [isBookingOpen, setIsBookingOpen] = useState<boolean>(false);
@@ -100,7 +102,7 @@ export default function App() {
   };
 
   const handleInquireExperience = (experienceTitle: string) => {
-    handleOpenBooking('package', 'rishikesh-escape');
+    handleOpenBooking('package', 'bliss-of-nature-package');
   };
 
   return (
@@ -150,44 +152,19 @@ export default function App() {
               onBookResort={(id) => handleOpenBooking('resort', id)}
             />
 
-            <ResortsSection
+            <HomeCuratedHighlights
+              packages={HOLIDAY_PACKAGES}
               resorts={RESORTS_DATA}
               onNavigate={handleNavigate}
-              onSelectResort={handleSelectResort}
-              onBookResort={(id) => handleOpenBooking('resort', id)}
-            />
-
-            <PackagesSection
-              packages={HOLIDAY_PACKAGES}
-              onNavigate={handleNavigate}
               onSelectPackage={handleSelectPackage}
-              onBookPackage={(id) => handleOpenBooking('package', id)}
+              onSelectResort={handleSelectResort}
+              onBookItem={(type, id) => handleOpenBooking(type, id)}
             />
 
-            <ExperiencesSection
-              experiences={EXPERIENCES_DATA}
+            <CtaContactSection
               onNavigate={handleNavigate}
-              onInquireExperience={handleInquireExperience}
+              onOpenBooking={() => handleOpenBooking('resort')}
             />
-
-            <DestinationsSection
-              destinations={DESTINATIONS_DATA}
-              onNavigate={handleNavigate}
-              onSelectDestination={(dest) => handleNavigate('destinations')}
-            />
-
-            <WhyChooseUs />
-
-            <GallerySection galleryItems={GALLERY_DATA} />
-
-            <TestimonialsSection reviews={REVIEWS_DATA} />
-
-            <CtaSection
-              onNavigate={handleNavigate}
-              onOpenBooking={() => handleOpenBooking('package')}
-            />
-
-            <ContactSection />
           </>
         )}
 
@@ -238,13 +215,13 @@ export default function App() {
           <div className="py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 space-y-2">
               <span className="text-xs font-semibold text-[#16745A] uppercase tracking-wider">
-                Curated Travel Journeys
+                Signature Holiday Package
               </span>
               <h1 className="font-display text-4xl sm:text-5xl font-bold">
-                Uttarakhand Holiday Packages
+                Bliss of Nature Holiday Package
               </h1>
               <p className="text-sm text-neutral-600 max-w-2xl">
-                All-inclusive holidays featuring luxury accommodations at Bliss of Nature, private scenic transportation, certified river guides, and personalized itineraries.
+                Our exclusive all-inclusive holiday package at Bliss of Nature Resort in Rishikesh — featuring luxury eco-cottages, Ganges white water rafting, sacred Triveni Ghat aarti, and rejuvenating mountain wellness.
               </p>
             </div>
             <PackagesSection
