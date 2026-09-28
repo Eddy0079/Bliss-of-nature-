@@ -41,7 +41,6 @@
         <a href="index.html" class="nav-link active">Home</a>
         <a href="resorts.html" class="nav-link">Resorts</a>
         <a href="packages.html" class="nav-link">Packages</a>
-        <a href="#destinations" class="nav-link">Destinations</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="contact.html" class="nav-link">Contact</a>
@@ -80,7 +79,6 @@
       <a href="index.html" class="mobile-nav-link active">Home</a>
       <a href="resorts.html" class="mobile-nav-link">Resorts & Stays</a>
       <a href="packages.html" class="mobile-nav-link">Holiday Packages</a>
-      <a href="#destinations" class="mobile-nav-link">Destinations</a>
       <a href="gallery.html" class="mobile-nav-link">Photo Gallery</a>
       <a href="about.html" class="mobile-nav-link">About Bon Holidays</a>
       <a href="contact.html" class="mobile-nav-link">Contact & Enquiry</a>
@@ -281,6 +279,9 @@
                 <span class="price-val">₹3,499 <span class="price-unit">/ night (incl. breakfast)</span></span>
               </div>
               <div class="resort-action-buttons">
+                <button type="button" class="btn btn-outline btn-sm" onclick="openImageModal()" style="display: inline-flex; align-items: center; gap: 0.35rem;">
+                  📷 Upload Photo
+                </button>
                 <a href="resorts.html#bliss-of-nature" class="btn btn-outline btn-sm">View Details</a>
                 <a href="https://wa.me/919876543210" class="btn btn-whatsapp btn-sm" data-whatsapp-package="Bliss of Nature Resort, Kanatal">
                   Enquire on WhatsApp
@@ -430,51 +431,6 @@
 
       <div style="text-align: center; margin-top: 2.25rem;">
         <a href="packages.html" class="btn btn-primary">Browse All 3 Curated Experiences →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       DESTINATIONS SECTION (Kanatal & Rishikesh Only)
-       ========================================================================= -->
-  <section class="section" id="destinations">
-    <div class="container">
-      <div class="section-intro">
-        <span class="kicker">Himalayan Paradises</span>
-        <h2>Explore Handpicked Destinations</h2>
-        <p>
-          From the pine forests and Bliss of Nature Resort in Kanatal to the thrill of white-water rafting in Rishikesh.
-        </p>
-      </div>
-
-      <div class="destinations-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto;">
-        <!-- Destination 1: Kanatal -->
-        <div class="destination-card">
-          <img src="images/destination-kanatal.jpg" alt="Kanatal Uttarakhand mountain landscape" class="destination-img" onerror="this.src='images/destination-kanatal.svg'">
-          <div class="destination-scrim"></div>
-          <div class="destination-body">
-            <span class="destination-alt">8,500 Ft · Deodar Forest Haven</span>
-            <h3 class="destination-name">Kanatal</h3>
-            <p class="destination-desc">
-              Home to Bliss of Nature Resort, the peaceful Kaudia Forest Trek, and panoramic 180° Himalayan snow views.
-            </p>
-            <a href="resorts.html#bliss-of-nature" class="destination-footer-link">Explore Bliss of Nature & Kanatal →</a>
-          </div>
-        </div>
-
-        <!-- Destination 2: Rishikesh -->
-        <div class="destination-card">
-          <img src="images/destination-rishikesh.jpg" alt="Rishikesh river rafting" class="destination-img" onerror="this.src='images/destination-rishikesh.svg'">
-          <div class="destination-scrim"></div>
-          <div class="destination-body">
-            <span class="destination-alt">Ganga Riverbanks & Adventure</span>
-            <h3 class="destination-name">Rishikesh</h3>
-            <p class="destination-desc">
-              World-renowned hub of white-water river rafting, cliff jumping, and spiritual evening Ganga Aarti.
-            </p>
-            <a href="packages.html#rishikesh-rafting" class="destination-footer-link">Explore Rishikesh Rafting →</a>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -679,7 +635,6 @@
             <a href="index.html" class="footer-link">Home</a>
             <a href="resorts.html" class="footer-link">Resorts & Stays</a>
             <a href="packages.html" class="footer-link">Holiday Packages</a>
-            <a href="#destinations" class="footer-link">Destinations</a>
             <a href="gallery.html" class="footer-link">Photo Gallery</a>
             <a href="about.html" class="footer-link">About Bon Holidays</a>
             <a href="contact.html" class="footer-link">Contact & Enquiry</a>

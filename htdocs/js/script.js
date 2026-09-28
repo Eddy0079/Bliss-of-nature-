@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initQuickSearchBar();
   initGalleryFilterAndLightbox();
   initFaqAccordions();
+  initImageManager();
 });
 
 /* --------------------------------------------------------------------------
@@ -544,4 +545,454 @@ function showToast(message) {
   setTimeout(() => {
     toast.classList.remove("show");
   }, 4000);
+}
+
+/* ==============================================================================
+   4. INTERACTIVE IMAGE MANAGER & RESORT PHOTO UPLOADER
+   ============================================================================== */
+const STORAGE_KEY_CUSTOM_IMAGES = "bon_custom_images";
+
+function getStoredCustomImages() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY_CUSTOM_IMAGES);
+    return raw ? JSON.parse(raw) : {};
+  } catch (err) {
+    console.warn("Could not read custom images from localStorage:", err);
+    return {};
+  }
+}
+
+function saveStoredCustomImages(data) {
+  try {
+    localStorage.setItem(STORAGE_KEY_CUSTOM_IMAGES, JSON.stringify(data));
+  } catch (err) {
+    console.warn("Could not save custom images to localStorage:", err);
+  }
+}
+
+function applyCustomImages() {
+  const images = getStoredCustomImages();
+  if (!images) return;
+
+  // 1. Bliss of Nature Main Exterior
+  if (images.bliss_main) {
+    document.querySelectorAll("img").forEach(img => {
+      const src = img.getAttribute("src") || "";
+      if (src.includes("bliss-of-nature-1") || src.includes("destination-kanatal.jpg") || src.includes("package-kanatal.jpg")) {
+        img.src = images.bliss_main;
+      }
+    });
+  }
+
+  // 2. Hero Background / Banner
+  if (images.hero_bg) {
+    const heroEl = document.querySelector(".hero");
+    if (heroEl) {
+      heroEl.style.backgroundImage = `linear-gradient(rgba(5, 46, 22, 0.72), rgba(5, 46, 22, 0.85)), url('${images.hero_bg}')`;
+    }
+    document.querySelectorAll("img").forEach(img => {
+      const src = img.getAttribute("src") || "";
+      if (src.includes("hero.jpg")) {
+        img.src = images.hero_bg;
+      }
+    });
+  }
+
+  // 3. Resort Sit-out Deck (Photo 2)
+  if (images.resort_deck) {
+    document.querySelectorAll("img").forEach(img => {
+      const src = img.getAttribute("src") || "";
+      if (src.includes("bliss-of-nature-2")) {
+        img.src = images.resort_deck;
+      }
+    });
+  }
+
+  // 4. Resort Chalet Suite (Photo 3)
+  if (images.resort_suite) {
+    document.querySelectorAll("img").forEach(img => {
+      const src = img.getAttribute("src") || "";
+      if (src.includes("bliss-of-nature-3")) {
+        img.src = images.resort_suite;
+      }
+    });
+  }
+
+  // 5. Resort Stargazing Lawn (Photo 4)
+  if (images.resort_lawn) {
+    document.querySelectorAll("img").forEach(img => {
+      const src = img.getAttribute("src") || "";
+      if (src.includes("bliss-of-nature-4")) {
+        img.src = images.resort_lawn;
+      }
+    });
+  }
+
+  // 6. Kaudia Forest Trek
+  if (images.kaudia_trek) {
+    document.querySelectorAll("img").forEach(img => {
+      const src = img.getAttribute("src") || "";
+      if (src.includes("package-kaudia-trek") || src.includes("gallery-6")) {
+        img.src = images.kaudia_trek;
+      }
+    });
+  }
+
+  // 7. Rishikesh Rafting
+  if (images.rishikesh_rafting) {
+    document.querySelectorAll("img").forEach(img => {
+      const src = img.getAttribute("src") || "";
+      if (src.includes("package-rishikesh") || src.includes("gallery-5")) {
+        img.src = images.rishikesh_rafting;
+      }
+    });
+  }
+
+  // 8. Custom Gallery Additions
+  if (Array.isArray(images.custom_gallery_items) && images.custom_gallery_items.length > 0) {
+    const galleryGrid = document.querySelector(".gallery-grid");
+    if (galleryGrid) {
+      // Remove any previously inserted custom items to avoid duplicates
+      galleryGrid.querySelectorAll(".custom-injected-item").forEach(el => el.remove());
+
+      images.custom_gallery_items.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "gallery-item custom-injected-item";
+        div.setAttribute("data-category", item.category || "resort");
+        div.innerHTML = `
+          <img src="${item.src}" alt="${item.title || 'Bliss of Nature'}" style="width: 100%; height: 260px; object-fit: cover;">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-title">${item.title || 'Bliss of Nature Resort'}</div>
+            <div class="gallery-overlay-sub">Guest Uploaded Photo</div>
+          </div>
+        `;
+        galleryGrid.insertBefore(div, galleryGrid.firstChild);
+      });
+      // Re-bind click for lightbox
+      initGalleryFilterAndLightbox();
+    }
+  }
+}
+
+function initImageManager() {
+  // Apply any custom photos saved previously
+  applyCustomImages();
+
+  // Inject "Upload Photos" button into header action zone
+  const actionZone = document.querySelector(".site-header .action-zone");
+  if (actionZone && !document.getElementById("btnUploadNav")) {
+    const uploadBtn = document.createElement("button");
+    uploadBtn.id = "btnUploadNav";
+    uploadBtn.className = "btn-upload-nav";
+    uploadBtn.type = "button";
+    uploadBtn.setAttribute("aria-label", "Upload or customize resort photos");
+    uploadBtn.innerHTML = `
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+        <circle cx="12" cy="13" r="4"/>
+      </svg>
+      <span>Upload Photos</span>
+    `;
+    uploadBtn.addEventListener("click", openImageModal);
+    actionZone.insertBefore(uploadBtn, actionZone.firstChild);
+  }
+
+  // In Gallery page, add upload trigger button next to filter tabs
+  const galleryFilterTabs = document.querySelector(".gallery-filter-tabs");
+  if (galleryFilterTabs && !document.getElementById("galleryUploadBtn")) {
+    const galUploadBtn = document.createElement("button");
+    galUploadBtn.id = "galleryUploadBtn";
+    galUploadBtn.className = "filter-btn";
+    galUploadBtn.style.background = "#f0fdf4";
+    galUploadBtn.style.borderColor = "#16a34a";
+    galUploadBtn.style.color = "#15803d";
+    galUploadBtn.style.fontWeight = "700";
+    galUploadBtn.innerHTML = "📷 + Upload Photo";
+    galUploadBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      openImageModal();
+    });
+    galleryFilterTabs.appendChild(galUploadBtn);
+  }
+
+  // Create Modal HTML if not exists
+  createImageModalDOM();
+}
+
+function createImageModalDOM() {
+  if (document.getElementById("imageUploadModal")) return;
+
+  const modal = document.createElement("div");
+  modal.id = "imageUploadModal";
+  modal.className = "modal-backdrop";
+  modal.innerHTML = `
+    <div class="modal-dialog image-modal-dialog">
+      <button class="modal-close-btn" id="closeImageModalBtn" aria-label="Close modal">✕</button>
+      
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+        <span style="font-size: 1.5rem;">📷</span>
+        <h3 style="margin: 0; font-size: 1.4rem; color: #14532d;">Upload Resort Photo</h3>
+      </div>
+      <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1.25rem;">
+        Upload your photo for <strong>Bliss of Nature Resort</strong>, Kaudia Trek, or Rishikesh Rafting. It updates the site in real-time.
+      </p>
+
+      <!-- Target Selection -->
+      <div style="margin-bottom: 1.25rem;">
+        <label style="display: block; font-size: 0.825rem; font-weight: 700; color: #334155; margin-bottom: 0.35rem;">
+          Select Placement on Website:
+        </label>
+        <select id="imageTargetSelect" style="width: 100%; padding: 0.65rem 0.85rem; border: 1.5px solid #cbd5e1; border-radius: 8px; font-weight: 600; color: #1e293b; background: #fff;">
+          <option value="bliss_main">🏔️ Bliss of Nature Resort (Main Card & Showcase)</option>
+          <option value="hero_bg">🌅 Hero Banner Background</option>
+          <option value="resort_deck">☕ Resort Mountain Sit-out Deck</option>
+          <option value="resort_suite">🛏️ Resort Handcrafted Cedar Suite</option>
+          <option value="resort_lawn">🌌 Bonfire & Stargazing Lawn</option>
+          <option value="kaudia_trek">🌲 Kaudia Forest Wilderness Trek</option>
+          <option value="rishikesh_rafting">🌊 Rishikesh River Rafting</option>
+          <option value="gallery_add">📸 Add as New Photo in Gallery</option>
+        </select>
+      </div>
+
+      <!-- Tabs: File Upload vs URL -->
+      <div class="uploader-tabs">
+        <button type="button" class="uploader-tab active" id="tabUploadFile">📁 From Computer / Phone</button>
+        <button type="button" class="uploader-tab" id="tabPasteUrl">🔗 Paste Image URL</button>
+      </div>
+
+      <!-- Tab 1: File Input & Dropzone -->
+      <div id="fileUploadSection">
+        <div class="uploader-dropzone" id="dropzoneArea">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="17 8 12 3 7 8"/>
+            <line x1="12" y1="3" x2="12" y2="15"/>
+          </svg>
+          <div style="font-weight: 700; color: #1e293b; margin-bottom: 0.25rem;">
+            Choose a photo or drag & drop here
+          </div>
+          <div style="font-size: 0.8rem; color: #64748b;">
+            JPG, PNG, or WebP (High Resolution supported)
+          </div>
+          <input type="file" id="imageFileInput" accept="image/*" style="display: none;">
+        </div>
+      </div>
+
+      <!-- Tab 2: URL Input -->
+      <div id="urlUploadSection" style="display: none; margin-bottom: 1.25rem;">
+        <label style="display: block; font-size: 0.825rem; font-weight: 700; color: #334155; margin-bottom: 0.35rem;">
+          Paste Direct Image URL:
+        </label>
+        <input type="url" id="imageUrlInput" placeholder="https://example.com/resort-photo.jpg" style="width: 100%; padding: 0.65rem 0.85rem; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 0.9rem;">
+        <button type="button" id="previewUrlBtn" class="btn btn-sm btn-outline" style="margin-top: 0.5rem;">Load Preview</button>
+      </div>
+
+      <!-- Live Preview -->
+      <div id="imagePreviewContainer" style="display: none;">
+        <label style="display: block; font-size: 0.825rem; font-weight: 700; color: #334155; margin-bottom: 0.25rem;">Preview:</label>
+        <div class="uploader-preview-box">
+          <img id="imagePreviewImg" src="" alt="Photo Preview">
+        </div>
+      </div>
+
+      <div class="uploader-tip">
+        <strong>💡 Instant Update:</strong> When you click "Apply Photo", the website immediately displays your uploaded image across the site and saves it to your browser. You can also paste links or send files in chat to embed them permanently into the site source.
+      </div>
+
+      <!-- Actions -->
+      <div style="display: flex; gap: 0.75rem; justify-content: flex-end; align-items: center; margin-top: 1.25rem;">
+        <button type="button" id="resetImagesBtn" class="btn btn-sm btn-outline" style="color: #dc2626; border-color: #fca5a5; margin-right: auto;">
+          Reset to Default Photos
+        </button>
+        <button type="button" id="cancelImageModalBtn" class="btn btn-sm btn-outline">
+          Cancel
+        </button>
+        <button type="button" id="applyImageBtn" class="btn btn-sm btn-primary" disabled>
+          Apply Photo to Website
+        </button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  // Wire Modal Events
+  wireImageModalEvents(modal);
+}
+
+let currentSelectedImageData = null;
+
+function wireImageModalEvents(modal) {
+  const closeBtn = document.getElementById("closeImageModalBtn");
+  const cancelBtn = document.getElementById("cancelImageModalBtn");
+  const dropzone = document.getElementById("dropzoneArea");
+  const fileInput = document.getElementById("imageFileInput");
+  const tabUpload = document.getElementById("tabUploadFile");
+  const tabUrl = document.getElementById("tabPasteUrl");
+  const fileSec = document.getElementById("fileUploadSection");
+  const urlSec = document.getElementById("urlUploadSection");
+  const urlInput = document.getElementById("imageUrlInput");
+  const previewUrlBtn = document.getElementById("previewUrlBtn");
+  const previewBox = document.getElementById("imagePreviewContainer");
+  const previewImg = document.getElementById("imagePreviewImg");
+  const applyBtn = document.getElementById("applyImageBtn");
+  const resetBtn = document.getElementById("resetImagesBtn");
+  const targetSelect = document.getElementById("imageTargetSelect");
+
+  function close() {
+    modal.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
+  if (closeBtn) closeBtn.addEventListener("click", close);
+  if (cancelBtn) cancelBtn.addEventListener("click", close);
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) close();
+  });
+
+  // Tab switching
+  tabUpload.addEventListener("click", () => {
+    tabUpload.classList.add("active");
+    tabUrl.classList.remove("active");
+    fileSec.style.display = "block";
+    urlSec.style.display = "none";
+  });
+
+  tabUrl.addEventListener("click", () => {
+    tabUrl.classList.add("active");
+    tabUpload.classList.remove("active");
+    fileSec.style.display = "none";
+    urlSec.style.display = "block";
+  });
+
+  // Dropzone click & drag
+  dropzone.addEventListener("click", () => fileInput.click());
+
+  dropzone.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropzone.classList.add("dragover");
+  });
+
+  dropzone.addEventListener("dragleave", () => {
+    dropzone.classList.remove("dragover");
+  });
+
+  dropzone.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropzone.classList.remove("dragover");
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      handleImageFile(e.dataTransfer.files[0]);
+    }
+  });
+
+  fileInput.addEventListener("change", () => {
+    if (fileInput.files && fileInput.files[0]) {
+      handleImageFile(fileInput.files[0]);
+    }
+  });
+
+  // Process File with optional canvas resize to prevent storage overflow
+  function handleImageFile(file) {
+    if (!file.type.startsWith("image/")) {
+      alert("Please select a valid image file (JPG, PNG, WebP).");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = (evt) => {
+      const originalDataUrl = evt.target.result;
+      
+      // Resize to reasonable maximum dimensions (1920px max)
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement("canvas");
+        const MAX_WIDTH = 1920;
+        const MAX_HEIGHT = 1200;
+        let width = img.width;
+        let height = img.height;
+
+        if (width > height) {
+          if (width > MAX_WIDTH) {
+            height *= MAX_WIDTH / width;
+            width = MAX_WIDTH;
+          }
+        } else {
+          if (height > MAX_HEIGHT) {
+            width *= MAX_HEIGHT / height;
+            height = MAX_HEIGHT;
+          }
+        }
+
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, width, height);
+
+        // Quality 0.85 jpeg
+        const optimizedDataUrl = canvas.toDataURL("image/jpeg", 0.85);
+        currentSelectedImageData = optimizedDataUrl;
+
+        previewImg.src = optimizedDataUrl;
+        previewBox.style.display = "block";
+        applyBtn.disabled = false;
+        applyBtn.innerText = "Apply Photo to Website";
+      };
+      img.src = originalDataUrl;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  // URL Preview
+  previewUrlBtn.addEventListener("click", () => {
+    const val = urlInput.value.trim();
+    if (!val) {
+      alert("Please enter a valid image URL.");
+      return;
+    }
+    currentSelectedImageData = val;
+    previewImg.src = val;
+    previewBox.style.display = "block";
+    applyBtn.disabled = false;
+  });
+
+  // Apply Action
+  applyBtn.addEventListener("click", () => {
+    if (!currentSelectedImageData) return;
+
+    const target = targetSelect.value;
+    const currentStorage = getStoredCustomImages();
+
+    if (target === "gallery_add") {
+      if (!Array.isArray(currentStorage.custom_gallery_items)) {
+        currentStorage.custom_gallery_items = [];
+      }
+      currentStorage.custom_gallery_items.unshift({
+        src: currentSelectedImageData,
+        title: "Bliss of Nature Resort, Kanatal",
+        category: "resort"
+      });
+    } else {
+      currentStorage[target] = currentSelectedImageData;
+    }
+
+    saveStoredCustomImages(currentStorage);
+    applyCustomImages();
+    close();
+    showToast("Photo updated successfully on website!");
+  });
+
+  // Reset Action
+  resetBtn.addEventListener("click", () => {
+    if (confirm("Reset all custom photos back to default images?")) {
+      localStorage.removeItem(STORAGE_KEY_CUSTOM_IMAGES);
+      location.reload();
+    }
+  });
+}
+
+function openImageModal() {
+  const modal = document.getElementById("imageUploadModal");
+  if (modal) {
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
 }

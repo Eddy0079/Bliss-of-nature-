@@ -33,7 +33,6 @@
         <a href="index.html" class="nav-link">Home</a>
         <a href="resorts.html" class="nav-link">Resorts</a>
         <a href="packages.html" class="nav-link">Packages</a>
-        <a href="index.html#destinations" class="nav-link">Destinations</a>
         <a href="gallery.html" class="nav-link active">Gallery</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="contact.html" class="nav-link">Contact</a>
@@ -68,7 +67,6 @@
       <a href="index.html" class="mobile-nav-link">Home</a>
       <a href="resorts.html" class="mobile-nav-link">Resorts & Stays</a>
       <a href="packages.html" class="mobile-nav-link">Holiday Packages</a>
-      <a href="index.html#destinations" class="mobile-nav-link">Destinations</a>
       <a href="gallery.html" class="mobile-nav-link active">Photo Gallery</a>
       <a href="about.html" class="mobile-nav-link">About Bon Holidays</a>
       <a href="contact.html" class="mobile-nav-link">Contact & Enquiry</a>
@@ -89,6 +87,20 @@
   <!-- GALLERY CONTENT -->
   <section class="section">
     <div class="container">
+      <!-- Photo Upload Callout -->
+      <div style="background: #f0fdf4; border: 1.5px dashed #86efac; border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div style="font-size: 2rem;">📸</div>
+          <div>
+            <strong style="color: #14532d; font-size: 1.05rem; display: block;">Have photos of Bliss of Nature Resort or your trek/rafting?</strong>
+            <span style="color: #475569; font-size: 0.9rem;">Upload them directly to update the website showcase instantly or share them with us.</span>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" onclick="openImageModal()" style="display: inline-flex; align-items: center; gap: 0.4rem;">
+          <span>Upload / Change Photo</span>
+        </button>
+      </div>
+
       <!-- Filter Tabs -->
       <div class="gallery-filter-tabs">
         <button class="filter-btn active" data-filter="all">All Photos</button>
