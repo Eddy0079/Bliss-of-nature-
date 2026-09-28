@@ -185,125 +185,105 @@ function initResortGallery() {
    Package Cards View Details Modal & Quick Enquire
    -------------------------------------------------------------------------- */
 const PACKAGE_DETAILS_MAP = {
-  "kanatal-bliss": {
-    title: "Kanatal Mountain Bliss & Stargazing",
-    duration: "3 Days / 2 Nights",
+  "bliss-of-nature": {
+    title: "Bliss of Nature Resort Stay & Stargazing",
+    duration: "Flexible / 2N-3D Stays",
     destination: "Kanatal (8,500 ft)",
-    price: "₹5,499 / person",
+    price: "₹3,499 / night",
     resort: "Bliss of Nature Resort, Kanatal",
-    overview: "Perched high amidst lush oak and deodar forests, Kanatal offers raw mountain tranquility. Stay at the signature Bliss of Nature Resort with panoramic 180° views of the snow-clad Garhwal Himalayas, nightly bonfires, forest nature walks, and crystal-clear stargazing.",
+    overview: "Perched high amidst aromatic deodar and cedar forests at 8,500 feet in Kanatal, Bliss of Nature Resort is our signature boutique mountain escape. Wake up to 180° uninterrupted snow peak vistas, unwind in handcrafted timber chalets, relish fresh mountain cuisine, and spend evenings around crackling bonfires under a canopy of stars.",
     itinerary: [
-      { day: "Day 1", title: "Arrival & Sunset Bonfire", desc: "Check-in at Bliss of Nature Resort. Welcome Garhwali herbal drink. Evening sunset walk through Surkanda ridge followed by warm bonfire and acoustic music under the stars." },
-      { day: "Day 2", title: "Forest Trek & Stargazing", desc: "Sunrise Himalayan view breakfast. Guided nature hike through Kaudia Deodar forest reserve. Evening telescope stargazing session and barbeque dinner." },
-      { day: "Day 3", title: "Surkanda Devi & Farewell", desc: "Morning yoga session on terrace lawn. Visit ancient Surkanda Devi Temple (9,995 ft) for 360° views. Departure with sweet mountain memories." }
+      { day: "Day 1", title: "Check-in & Sunset Stargazing", desc: "Arrive at Bliss of Nature Resort. Welcome pahadi herbal tea. Relax on private mountain-view sit-outs and enjoy an evening lawn bonfire with acoustic music." },
+      { day: "Day 2", title: "Alpine Sunrise & Mountain Leisure", desc: "Golden sunrise breakfast facing the Garhwal snow crests. Leisure day exploring the landscaped resort grounds, telescope stargazing, and customized barbecue dinner." },
+      { day: "Day 3", title: "Morning Mountain Walk & Departure", desc: "Wholesome buffet breakfast, nature photography along the resort ridgeline, and smooth check-out." }
     ],
     inclusions: [
-      "2 Nights luxury cottage stay at Bliss of Nature Resort",
-      "All daily buffet meals (Breakfast & Dinner)",
-      "Evening bonfire with snacks & music",
-      "Guided Kaudia forest eco-trail walk",
-      "Stargazing session with telescope"
+      "Luxury wooden cottage stay at Bliss of Nature Resort",
+      "Daily buffet breakfast & dinner with local mountain specialties",
+      "Evening lawn campfire & musical ambience",
+      "High-power telescope stargazing session",
+      "Complimentary high-speed Wi-Fi & private parking"
+    ]
+  },
+  "kaudia-trek": {
+    title: "Kaudia Forest Wilderness Trek",
+    duration: "Full Day / Half Day Trek",
+    destination: "Kanatal (8,500 ft)",
+    price: "₹999 / person",
+    resort: "Base at Bliss of Nature Resort, Kanatal",
+    overview: "An enchanting mountain trek winding through ancient deodar, pine, and oak groves in the protected Kaudia forest sanctuary. The trail reveals panoramic vistas of distant Himalayan snow peaks, freshwater springs, birdwatching opportunities, and pure alpine tranquility.",
+    itinerary: [
+      { day: "Morning", title: "Trailhead Departure & Pine Groves", desc: "Start from the trailhead near Kanatal. Walk under towering deodar canopies with crisp mountain air and singing Himalayan birds." },
+      { day: "Midday", title: "Ridge Viewpoint & Forest Picnic", desc: "Reach the panoramic clearing overlooking deep valleys and terraced farms. Enjoy a packed Pahadi trail lunch and relaxation amidst wild wildflowers." },
+      { day: "Afternoon", title: "Wildlife Spotting & Return", desc: "Spot Himalayan pheasants, barking deer tracks, and indigenous flora. Gentle return walk back to base." }
+    ],
+    inclusions: [
+      "Certified local Himalayan trekking guide & escort",
+      "Forest sanctuary entry permits",
+      "Packed nutritious mountain picnic lunch & water",
+      "Trekking poles & basic safety gear",
+      "First-aid and emergency communication support"
+    ]
+  },
+  "rishikesh-rafting": {
+    title: "Rishikesh White Water River Rafting",
+    duration: "Adventure Expedition (Half Day)",
+    destination: "Shivpuri to Rishikesh",
+    price: "₹1,499 / person",
+    resort: "Ganga Valley, Rishikesh",
+    overview: "Conquer the legendary white-water rapids of the sacred Ganga in Rishikesh. Paddle through exhilarating Grade III and IV rapids—including Roller Coaster, Golf Course, and Club House—paired with adrenaline-fueled cliff jumping and body surfing under certified river marshals.",
+    itinerary: [
+      { day: "Briefing", title: "Safety Drill & Equipment Fitting", desc: "Meet at Shivpuri launch point. Fitting with international-grade life vests, helmets, and a comprehensive paddle technique safety briefing." },
+      { day: "The Rapids", title: "16 KM Rafting & Cliff Jump", desc: "Navigate thrilling Grade III & IV rapids. Stop at Maggie Point for an adrenaline cliff jump and float in calm river pools." },
+      { day: "Finish", title: "NIM Beach Arrival & Return", desc: "Final rapid run ending at NIM Beach Rishikesh. Dry off, view action photos, and return transfer." }
+    ],
+    inclusions: [
+      "16 KM River Rafting expedition from Shivpuri to Rishikesh",
+      "Licensed river marshals, safety kayakers, and rescue support",
+      "Imported high-buoyancy life jackets & safety helmets",
+      "Cliff jumping and body surfing experience",
+      "Transport from meeting office to launch point"
+    ]
+  },
+  // Legacy aliases for backward compatibility with buttons
+  "kanatal-bliss": {
+    title: "Bliss of Nature Resort Stay & Stargazing",
+    duration: "Flexible / 2N-3D Stays",
+    destination: "Kanatal (8,500 ft)",
+    price: "₹3,499 / night",
+    resort: "Bliss of Nature Resort, Kanatal",
+    overview: "Perched high amidst aromatic deodar and cedar forests at 8,500 feet in Kanatal, Bliss of Nature Resort is our signature boutique mountain escape. Wake up to 180° uninterrupted snow peak vistas, unwind in handcrafted timber chalets, relish fresh mountain cuisine, and spend evenings around crackling bonfires under a canopy of stars.",
+    itinerary: [
+      { day: "Day 1", title: "Check-in & Sunset Stargazing", desc: "Arrive at Bliss of Nature Resort. Welcome pahadi herbal tea. Relax on private mountain-view sit-outs and enjoy an evening lawn bonfire with acoustic music." },
+      { day: "Day 2", title: "Alpine Sunrise & Mountain Leisure", desc: "Golden sunrise breakfast facing the Garhwal snow crests. Leisure day exploring the landscaped resort grounds, telescope stargazing, and customized barbecue dinner." },
+      { day: "Day 3", title: "Morning Mountain Walk & Departure", desc: "Wholesome buffet breakfast, nature photography along the resort ridgeline, and smooth check-out." }
+    ],
+    inclusions: [
+      "Luxury wooden cottage stay at Bliss of Nature Resort",
+      "Daily buffet breakfast & dinner with local mountain specialties",
+      "Evening lawn campfire & musical ambience",
+      "High-power telescope stargazing session",
+      "Complimentary high-speed Wi-Fi & private parking"
     ]
   },
   "rishikesh-glamping": {
-    title: "Rishikesh River Glamping & Rafting",
-    duration: "3 Days / 2 Nights",
-    destination: "Rishikesh & Shivpuri",
-    price: "₹4,999 / person",
-    resort: "Luxury Riverside Camp, Shivpuri",
-    overview: "Experience the adrenaline and spiritual serenity of Rishikesh. Luxurious alpine river-facing glamping tents, exhilarating Grade III/IV river rafting, cliff jumping, Ganga Aarti at Parmarth Niketan, and gourmet riverside dining.",
+    title: "Rishikesh White Water River Rafting",
+    duration: "Adventure Expedition (Half Day)",
+    destination: "Shivpuri to Rishikesh",
+    price: "₹1,499 / person",
+    resort: "Ganga Valley, Rishikesh",
+    overview: "Conquer the legendary white-water rapids of the sacred Ganga in Rishikesh. Paddle through exhilarating Grade III and IV rapids—including Roller Coaster, Golf Course, and Club House—paired with adrenaline-fueled cliff jumping and body surfing under certified river marshals.",
     itinerary: [
-      { day: "Day 1", title: "Riverside Camp Check-in", desc: "Arrive at picturesque riverside camp. Afternoon body surfing and river swimming. Evening beach volleyball and riverside bonfire with snacks." },
-      { day: "Day 2", title: "White River Rafting & Ganga Aarti", desc: "16 KM thrilling rafting expedition from Shivpuri to NIM Beach including Cliff Jump. Evening visit to Parmarth Niketan for Divine Ganga Aarti." },
-      { day: "Day 3", title: "Waterfall Hike & Departure", desc: "Morning nature hike to Neer Garh waterfall. Healthy organic breakfast and check-out." }
+      { day: "Briefing", title: "Safety Drill & Equipment Fitting", desc: "Meet at Shivpuri launch point. Fitting with international-grade life vests, helmets, and a comprehensive paddle technique safety briefing." },
+      { day: "The Rapids", title: "16 KM Rafting & Cliff Jump", desc: "Navigate thrilling Grade III & IV rapids. Stop at Maggie Point for an adrenaline cliff jump and float in calm river pools." },
+      { day: "Finish", title: "NIM Beach Arrival & Return", desc: "Final rapid run ending at NIM Beach Rishikesh. Dry off, view action photos, and return transfer." }
     ],
     inclusions: [
-      "2 Nights AC riverside swiss luxury tent stay",
-      "All meals (2 Breakfast, 2 Lunch, 2 Dinner)",
-      "16 KM River rafting with licensed safety marshals & equipment",
-      "Cliff jump and body surfing experience",
-      "Nightly riverside bonfire"
-    ]
-  },
-  "chopta-trek": {
-    title: "Chopta Tungnath Alpine Meadow Trek",
-    duration: "4 Days / 3 Nights",
-    destination: "Chopta, Tungnath & Chandrashila",
-    price: "₹7,499 / person",
-    resort: "Bon Alpine Camps, Chopta",
-    overview: "Known as the Mini Switzerland of India, Chopta features rolling alpine meadows (bugyals) framed by majestic Chaukhamba peaks. Trek to the world's highest Shiva shrine at Tungnath (12,100 ft) and Chandrashila summit (13,100 ft).",
-    itinerary: [
-      { day: "Day 1", title: "Rishikesh to Chopta Scenic Drive", desc: "Scenic mountain drive along Alaknanda and Mandakini rivers. Check-in at meadow camp. Sunset over Chaukhamba." },
-      { day: "Day 2", title: "Tungnath & Chandrashila Summit", desc: "Early morning trek (4.5 km) through rhododendron woods to Tungnath and breathtaking Chandrashila peak. Return to camp by evening." },
-      { day: "Day 3", title: "Deoria Tal Lake Exploration", desc: "Short trek to the emerald Deoria Tal lake with reflection of Chaukhamba peaks. Campfire and folk stories." },
-      { day: "Day 4", title: "Morning Meadow Walk & Return", desc: "Morning birdwatching walk and return transfer with scenic stops." }
-    ],
-    inclusions: [
-      "3 Nights Swiss tent stay with mountain views",
-      "Nutritious mountain meals (Breakfast & Dinner)",
-      "Certified local trekking guide and forest entry permits",
-      "Bonfire and stargazing assistance",
-      "First aid and emergency oxygen support"
-    ]
-  },
-  "chardham-yatra": {
-    title: "Sacred Char Dham Spiritual Yatra",
-    duration: "10 Days / 9 Nights",
-    destination: "Yamunotri, Gangotri, Kedarnath, Badrinath",
-    price: "₹24,999 / person",
-    resort: "Curated Pilgrim Hotels & Cottages",
-    overview: "A transformative journey through the Himalayas visiting the four sacred dhams. Complete VIP darshan coordination, comfortable stays, experienced mountain drivers, and hygienic satvik food.",
-    itinerary: [
-      { day: "Day 1-2", title: "Haridwar to Barkot & Yamunotri", desc: "Drive to Barkot. Trek to Yamunotri Temple and holy Surya Kund bath." },
-      { day: "Day 3-4", title: "Uttarkashi & Gangotri Dham", desc: "Visit Gangotri Temple via scenic Harsil Valley along the sparkling Bhagirathi." },
-      { day: "Day 5-7", title: "Guptkashi & Divine Kedarnath", desc: "Trek or helicopter to Kedarnath. Special evening prayer and temple darshan." },
-      { day: "Day 8-10", title: "Badrinath, Mana & Rishikesh", desc: "Darshan at Badrinath Temple, visit Mana (India's First Village), and return via Devprayag." }
-    ],
-    inclusions: [
-      "9 Nights comfortable verified hotel/guesthouse stays",
-      "Pure vegetarian satvik breakfast and dinner daily",
-      "Dedicated sanitized vehicle with seasoned mountain driver",
-      "Biometric registration & Yatra permit coordination",
-      "All toll taxes, parking, and driver allowances"
-    ]
-  },
-  "mussoorie-escape": {
-    title: "Mussoorie & Dhanaulti Hills Escape",
-    duration: "3 Days / 2 Nights",
-    destination: "Mussoorie & Dhanaulti",
-    price: "₹5,999 / person",
-    resort: "Heritage Pine Valley Resort",
-    overview: "Relive classic hill station charm. Walk along colonial Mall Road, visit Kempty and Bhatta Falls, experience the quiet cedar tranquility of Dhanaulti Eco Park, and witness the famous Mussoorie Winterline sunset.",
-    itinerary: [
-      { day: "Day 1", title: "Mussoorie Arrival & Mall Road", desc: "Check in. Evening stroll through historic Mall Road, Camel's Back Road sunset point." },
-      { day: "Day 2", title: "Dhanaulti & Eco Park Excursion", desc: "Day trip to peaceful Dhanaulti. Walk through towering deodar trees and visit Surkanda Devi Temple." },
-      { day: "Day 3", title: "Waterfalls & Departure", desc: "Visit scenic waterfalls, souvenir shopping, and departure." }
-    ],
-    inclusions: [
-      "2 Nights stay in Deluxe Valley View Room",
-      "Daily breakfast and chef's special dinner",
-      "Sightseeing cab for Dhanaulti and Mussoorie attractions",
-      "All taxes and parking charges"
-    ]
-  },
-  "corbett-wildlife": {
-    title: "Jim Corbett Wildlife & Wilderness Safari",
-    duration: "3 Days / 2 Nights",
-    destination: "Jim Corbett National Park, Ramnagar",
-    price: "₹6,999 / person",
-    resort: "Corbett Riverside Jungle Resort",
-    overview: "Enter the kingdom of the Royal Bengal Tiger. Stay at a riverside jungle resort, take an open 4x4 Gypsy safari into Corbett's deepest forest zones, and unwind with evening folk performances by the bonfire.",
-    itinerary: [
-      { day: "Day 1", title: "Resort Arrival & Kosi River", desc: "Check-in at jungle resort. Relax by the Kosi river. Evening wildlife movie screening and bonfire dinner." },
-      { day: "Day 2", title: "4x4 Open Jeep Safari", desc: "Early morning thrilling Jeep safari into Corbett National Park (Bijrani/Jhirna/Dhela zone) with wildlife naturalist guide. Afternoon relaxation by pool." },
-      { day: "Day 3", title: "Corbett Falls & Return", desc: "Visit Corbett Heritage Museum and Corbett Falls before heading home." }
-    ],
-    inclusions: [
-      "2 Nights jungle cottage accommodation",
-      "All meals included (Breakfast, Lunch, Dinner)",
-      "1 Open 4x4 Jeep Safari with naturalist guide and forest permits",
-      "Evening wildlife documentary and bonfire",
-      "Complimentary resort recreational activities"
+      "16 KM River Rafting expedition from Shivpuri to Rishikesh",
+      "Licensed river marshals, safety kayakers, and rescue support",
+      "Imported high-buoyancy life jackets & safety helmets",
+      "Cliff jumping and body surfing experience",
+      "Transport from meeting office to launch point"
     ]
   }
 };
