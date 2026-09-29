@@ -1454,6 +1454,15 @@ textarea.form-control {
 /* --------------------------------------------------------------------------
    Floating WhatsApp Button
    -------------------------------------------------------------------------- */
+@keyframes floatOscillate {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
 .floating-whatsapp {
   position: fixed;
   bottom: 24px;
@@ -1470,12 +1479,14 @@ textarea.form-control {
   font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
-  transition: all var(--transition-fast);
+  animation: floatOscillate 3.2s ease-in-out infinite;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .floating-whatsapp:hover {
   background-color: #20bd5a;
-  transform: translateY(-3px) scale(1.02);
+  animation-play-state: paused;
+  transform: translateY(-4px) scale(1.03);
   box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
   color: #ffffff;
 }
