@@ -187,22 +187,22 @@ function initResortGallery() {
    -------------------------------------------------------------------------- */
 const PACKAGE_DETAILS_MAP = {
   "bliss-of-nature": {
-    title: "Bliss of Nature Resort Stay & Stargazing",
+    title: "Bliss of Nature Resort Alpine Stay",
     duration: "Flexible / 2N-3D Stays",
     destination: "Kanatal (8,500 ft)",
     price: "₹3,499 / night",
     resort: "Bliss of Nature Resort, Kanatal",
     overview: "Perched high amidst aromatic deodar and cedar forests at 8,500 feet in Kanatal, Bliss of Nature Resort is our signature boutique mountain escape. Wake up to 180° uninterrupted snow peak vistas, unwind in handcrafted timber chalets, relish fresh mountain cuisine, and spend evenings around crackling bonfires under a canopy of stars.",
     itinerary: [
-      { day: "Day 1", title: "Check-in & Sunset Stargazing", desc: "Arrive at Bliss of Nature Resort. Welcome pahadi herbal tea. Relax on private mountain-view sit-outs and enjoy an evening lawn bonfire with acoustic music." },
-      { day: "Day 2", title: "Alpine Sunrise & Mountain Leisure", desc: "Golden sunrise breakfast facing the Garhwal snow crests. Leisure day exploring the landscaped resort grounds, telescope stargazing, and customized barbecue dinner." },
+      { day: "Day 1", title: "Check-in & Mountain Sunset", desc: "Arrive at Bliss of Nature Resort. Welcome pahadi herbal tea. Relax on private mountain-view sit-outs and enjoy an evening lawn bonfire with acoustic music." },
+      { day: "Day 2", title: "Alpine Sunrise & Mountain Leisure", desc: "Golden sunrise breakfast facing the Garhwal snow crests. Leisure day exploring the landscaped resort grounds, panoramic viewpoint observation, and customized barbecue dinner." },
       { day: "Day 3", title: "Morning Mountain Walk & Departure", desc: "Wholesome buffet breakfast, nature photography along the resort ridgeline, and smooth check-out." }
     ],
     inclusions: [
       "Luxury wooden cottage stay at Bliss of Nature Resort",
       "Daily buffet breakfast & dinner with local mountain specialties",
       "Evening lawn campfire & musical ambience",
-      "High-power telescope stargazing session",
+      "Scenic mountain observation deck with 180° views",
       "Complimentary high-speed Wi-Fi & private parking"
     ]
   },
@@ -248,22 +248,22 @@ const PACKAGE_DETAILS_MAP = {
   },
   // Legacy aliases for backward compatibility with buttons
   "kanatal-bliss": {
-    title: "Bliss of Nature Resort Stay & Stargazing",
+    title: "Bliss of Nature Resort Alpine Stay",
     duration: "Flexible / 2N-3D Stays",
     destination: "Kanatal (8,500 ft)",
     price: "₹3,499 / night",
     resort: "Bliss of Nature Resort, Kanatal",
     overview: "Perched high amidst aromatic deodar and cedar forests at 8,500 feet in Kanatal, Bliss of Nature Resort is our signature boutique mountain escape. Wake up to 180° uninterrupted snow peak vistas, unwind in handcrafted timber chalets, relish fresh mountain cuisine, and spend evenings around crackling bonfires under a canopy of stars.",
     itinerary: [
-      { day: "Day 1", title: "Check-in & Sunset Stargazing", desc: "Arrive at Bliss of Nature Resort. Welcome pahadi herbal tea. Relax on private mountain-view sit-outs and enjoy an evening lawn bonfire with acoustic music." },
-      { day: "Day 2", title: "Alpine Sunrise & Mountain Leisure", desc: "Golden sunrise breakfast facing the Garhwal snow crests. Leisure day exploring the landscaped resort grounds, telescope stargazing, and customized barbecue dinner." },
+      { day: "Day 1", title: "Check-in & Mountain Sunset", desc: "Arrive at Bliss of Nature Resort. Welcome pahadi herbal tea. Relax on private mountain-view sit-outs and enjoy an evening lawn bonfire with acoustic music." },
+      { day: "Day 2", title: "Alpine Sunrise & Mountain Leisure", desc: "Golden sunrise breakfast facing the Garhwal snow crests. Leisure day exploring the landscaped resort grounds, panoramic viewpoint observation, and customized barbecue dinner." },
       { day: "Day 3", title: "Morning Mountain Walk & Departure", desc: "Wholesome buffet breakfast, nature photography along the resort ridgeline, and smooth check-out." }
     ],
     inclusions: [
       "Luxury wooden cottage stay at Bliss of Nature Resort",
       "Daily buffet breakfast & dinner with local mountain specialties",
       "Evening lawn campfire & musical ambience",
-      "High-power telescope stargazing session",
+      "Scenic mountain observation deck with 180° views",
       "Complimentary high-speed Wi-Fi & private parking"
     ]
   },
@@ -618,7 +618,7 @@ function applyCustomImages() {
     });
   }
 
-  // 5. Resort Stargazing Lawn (Photo 4)
+  // 5. Resort Evening Bonfire Lawn (Photo 4)
   if (images.resort_lawn) {
     document.querySelectorAll("img").forEach(img => {
       const src = img.getAttribute("src") || "";
@@ -707,7 +707,7 @@ function createImageModalDOM() {
           <option value="hero_bg">🌅 Hero Banner Background</option>
           <option value="resort_deck">☕ Resort Mountain Sit-out Deck</option>
           <option value="resort_suite">🛏️ Resort Handcrafted Cedar Suite</option>
-          <option value="resort_lawn">🌌 Bonfire & Stargazing Lawn</option>
+          <option value="resort_lawn">🔥 Evening Bonfire & Campfire Lawn</option>
           <option value="kaudia_trek">🌲 Kaudia Forest Wilderness Trek</option>
           <option value="rishikesh_rafting">🌊 Rishikesh River Rafting</option>
           <option value="gallery_add">📸 Add as New Photo in Gallery</option>

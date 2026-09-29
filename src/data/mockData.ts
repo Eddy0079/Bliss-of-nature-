@@ -27,7 +27,7 @@ export const RESORTS_DATA: Resort[] = [
       'Mountain-View Infinity Plunge Pool',
       'The Whispering Pines Organic Bistro',
       'Riverside Open-Air Yoga & Meditation Shala',
-      'Evening Firepit & Acoustic Stargazing',
+      'Evening Firepit & Acoustic Music',
       'Ayurvedic Herbal Spa & Steam Bath',
       'High-Speed Wi-Fi (Fiber & Starlink Backup)',
       'Curated Forest Trails & Birdwatching Walks',
@@ -67,8 +67,8 @@ export const RESORTS_DATA: Resort[] = [
         bed: 'California King',
         pricePerNight: 12500,
         image: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=80',
-        description: 'Our premier hilltop suite with 270-degree wraparound glass walls, outdoor heated cedar tub, and private telescope for Himalayan stargazing.',
-        amenities: ['270° Valley Panoramas', 'Outdoor Heated Cedar Tub', 'Stargazing Telescope', 'Butler Service']
+        description: 'Our premier hilltop suite with 270-degree wraparound glass walls, outdoor heated cedar tub, and panoramic views of Himalayan peaks.',
+        amenities: ['270° Valley Panoramas', 'Outdoor Heated Cedar Tub', 'Private Observation Deck', 'Butler Service']
       },
       {
         id: 'bon-room-4',
@@ -193,7 +193,7 @@ export const RESORTS_DATA: Resort[] = [
     ],
     shortDescription: 'Tucked away at 8,500 feet, surrounded by thick rhododendron forests with unobstructed vistas of the Bandarpoonch and Swargarohini snow ranges.',
     longDescription: 'For those who yearn for true peace and wilderness silence. Built with recycled river stone and cedar timber, Riverstone is an off-grid sanctuary that leaves zero ecological footprint.',
-    amenities: ['Panoramic Snow Range Vista', 'Orchard Organic Meals', 'Solar Powered & Eco-Certified', 'Forest Stargazing Deck', 'Heated Stone Beds'],
+    amenities: ['Panoramic Snow Range Vista', 'Orchard Organic Meals', 'Solar Powered & Eco-Certified', 'Panoramic Forest View Deck', 'Heated Stone Beds'],
     rooms: [
       {
         id: 'rwl-1',
@@ -318,7 +318,7 @@ export const EXPERIENCES_DATA: Experience[] = [
     shortDescription: 'Sleep under starlit Himalayan skies beside whispering waters, accompanied by live barbecue and acoustic songs.',
     fullDescription: 'Our private riverside campgrounds feature plush Swiss safari tents with real beds, attached heated bathrooms, and private firepits for starlight evenings.',
     image: 'https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80',
-    highlights: ['Attached washrooms & power backups', 'Campfire with live barbecue grill', 'Stargazing with astronomy binoculars'],
+    highlights: ['Attached washrooms & power backups', 'Campfire with live barbecue grill', 'Acoustic music around the firepit'],
     bestSeason: 'October to May'
   },
   {
@@ -422,7 +422,7 @@ export const DESTINATIONS_DATA: Destination[] = [
     bestTimeToVisit: 'All Year (Winter for Snow)',
     highlights: ['Surkanda Devi Temple', 'Kaudia Forest Trails', 'Eco Park Dhanaulti', 'Apple Orchards'],
     description: 'Quiet, untouched mountain settlements offering dramatic views of the Bandarpoonch and Chaukhamba snow peaks.',
-    popularFor: 'Seclusion, stargazing, and untouched alpine forest trails.'
+    popularFor: 'Seclusion, alpine tranquility, and untouched pine forest trails.'
   },
   {
     id: 'tehri',

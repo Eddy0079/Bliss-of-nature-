@@ -63,7 +63,7 @@
   <rect width="900" height="650" fill="url(#cardShadow)" />
 
   <!-- Typography Overlay -->
-  <text x="54" y="533" font-family="'Playfair Display', Georgia, serif" font-size="34" font-weight="700" fill="#ffffff" letter-spacing="1.5">NIGHT STARGAZING & BONFIRE</text>
-  <text x="54" y="578" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="600" fill="#facc15" letter-spacing="2.5">Milky Way over Pine Canopy</text>
+  <text x="54" y="533" font-family="'Playfair Display', Georgia, serif" font-size="34" font-weight="700" fill="#ffffff" letter-spacing="1.5">EVENING BONFIRE & MUSIC</text>
+  <text x="54" y="578" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="600" fill="#facc15" letter-spacing="2.5">Warm Campfire under Mountain Pines</text>
   <text x="54" y="611" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="500" fill="#e2e8f0" letter-spacing="1">BON HOLIDAYS · HANDPICKED UTTARAKHAND EXPERIENCES</text>
 </svg>

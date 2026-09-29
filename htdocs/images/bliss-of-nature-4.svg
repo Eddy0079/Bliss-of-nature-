@@ -63,7 +63,7 @@
   <rect width="1200" height="800" fill="url(#cardShadow)" />
 
   <!-- Typography Overlay -->
-  <text x="72" y="656" font-family="'Playfair Display', Georgia, serif" font-size="45" font-weight="700" fill="#ffffff" letter-spacing="1.5">STARGAZING & EVENING BONFIRES</text>
+  <text x="72" y="656" font-family="'Playfair Display', Georgia, serif" font-size="45" font-weight="700" fill="#ffffff" letter-spacing="1.5">EVENING BONFIRES & MUSIC</text>
   <text x="72" y="712" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="600" fill="#facc15" letter-spacing="2.5">Live Music · Deodar Forest Lawn · Barbeque</text>
   <text x="72" y="752" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="500" fill="#e2e8f0" letter-spacing="1">BON HOLIDAYS · HANDPICKED UTTARAKHAND EXPERIENCES</text>
 </svg>
