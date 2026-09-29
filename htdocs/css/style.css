@@ -253,6 +253,19 @@ p {
   color: #ffffff;
 }
 
+.btn-facebook {
+  background-color: #1877f2;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(24, 119, 242, 0.3);
+}
+
+.btn-facebook:hover {
+  background-color: #166fe5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(24, 119, 242, 0.4);
+  color: #ffffff;
+}
+
 .btn-outline {
   border: 1.5px solid currentColor;
   background-color: transparent;
@@ -1452,35 +1465,47 @@ textarea.form-control {
 }
 
 /* --------------------------------------------------------------------------
-   Floating WhatsApp Button
+   Floating Contact Dock (WhatsApp & Facebook Buttons)
    -------------------------------------------------------------------------- */
 @keyframes floatOscillate {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
   }
 }
 
-.floating-whatsapp {
+.floating-contact-dock {
   position: fixed;
   bottom: 24px;
   right: 24px;
   z-index: 995;
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.65rem;
+}
+
+.floating-social-btn,
+.floating-whatsapp,
+.floating-facebook {
+  display: flex;
   align-items: center;
   gap: 0.6rem;
-  background-color: #25d366;
-  color: #ffffff;
   padding: 0.75rem 1.25rem;
   border-radius: var(--radius-full);
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
   font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.floating-whatsapp {
+  background-color: #25d366;
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
   animation: floatOscillate 3.2s ease-in-out infinite;
-  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .floating-whatsapp:hover {
@@ -1491,10 +1516,28 @@ textarea.form-control {
   color: #ffffff;
 }
 
-.floating-whatsapp svg {
-  width: 24px;
-  height: 24px;
+.floating-facebook {
+  background-color: #1877f2;
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(24, 119, 242, 0.45);
+  animation: floatOscillate 3.2s ease-in-out infinite 0.4s;
+}
+
+.floating-facebook:hover {
+  background-color: #166fe5;
+  animation-play-state: paused;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(24, 119, 242, 0.6);
+  color: #ffffff;
+}
+
+.floating-social-btn svg,
+.floating-whatsapp svg,
+.floating-facebook svg {
+  width: 22px;
+  height: 22px;
   fill: currentColor;
+  flex-shrink: 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -1843,10 +1886,17 @@ textarea.form-control {
   .enquiry-form-card {
     padding: 1.5rem;
   }
-  .floating-whatsapp span {
+  .floating-contact-dock {
+    bottom: 18px;
+    right: 18px;
+    gap: 0.5rem;
+  }
+  .floating-whatsapp span,
+  .floating-facebook span {
     display: none;
   }
-  .floating-whatsapp {
+  .floating-whatsapp,
+  .floating-facebook {
     padding: 0.75rem;
     border-radius: var(--radius-full);
   }

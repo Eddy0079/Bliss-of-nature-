@@ -24,7 +24,7 @@ const BON_CONFIG = {
   
   // Social Media Links (Easily update URLs here)
   socialLinks: {
-    facebook: "https://facebook.com/bonholidays",
+    facebook: "https://www.facebook.com/profile.php?id=61594779811083",
     instagram: "https://instagram.com/bonholidays",
     youtube: "https://youtube.com/@bonholidays",
     whatsapp: "https://wa.me/919149074344"

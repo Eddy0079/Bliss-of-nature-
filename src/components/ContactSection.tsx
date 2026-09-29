@@ -149,7 +149,7 @@ export const ContactSection: React.FC = () => {
                     <Instagram className="w-4 h-4" />
                   </a>
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/profile.php?id=61594779811083"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-9 h-9 rounded-lg bg-[#F5F7F6] hover:bg-[#16745A] hover:text-white text-neutral-700 flex items-center justify-center transition-colors"

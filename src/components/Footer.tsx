@@ -54,7 +54,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectDestination 
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61594779811083"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#16745A] text-white/80 hover:text-white flex items-center justify-center transition-colors"
