@@ -221,9 +221,7 @@ const PACKAGE_DETAILS_MAP = {
     inclusions: [
       "Certified local Himalayan trekking guide & escort",
       "Forest sanctuary entry permits",
-      "Packed nutritious mountain picnic lunch & water",
-      "Trekking poles & basic safety gear",
-      "First-aid and emergency communication support"
+      "Trail guidance & first-aid safety support"
     ]
   },
   "rishikesh-rafting": {
