@@ -24,9 +24,9 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onQuickSearch }) => {
       {/* Background Photography with Scrim */}
       <div className="absolute inset-0 z-0">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2000&q=85"
-          alt="Majestic Himalayan valleys and pine forests in Uttarakhand"
-          fallbackTitle="Himalayan Foothills · Uttarakhand"
+          src="/images/hero.jpg"
+          alt="Bliss of Nature Resort and Himalayan mountain vista"
+          fallbackTitle="Bliss of Nature · Kanatal"
           fallbackCategory="nature"
           className="w-full h-full object-cover object-center scale-105 transform animate-fade-in"
           containerClassName="w-full h-full"

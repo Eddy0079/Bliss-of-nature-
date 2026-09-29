@@ -219,7 +219,7 @@ Please confirm availability and booking procedure.`
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
-                    href={`https://wa.me/919876543210?text=${getWhatsAppMessage()}`}
+                    href={`https://wa.me/919149074344?text=${getWhatsAppMessage()}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 py-3 px-4 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2"

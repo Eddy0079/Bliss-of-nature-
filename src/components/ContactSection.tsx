@@ -68,8 +68,8 @@ export const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <span className="text-xs text-neutral-500 font-medium block">Phone Reservations</span>
-                    <a href="tel:+919876543210" className="text-base font-semibold text-[#17231F] hover:text-[#16745A] transition-colors">
-                      +91 98765 43210
+                    <a href="tel:+919149074344" className="text-base font-semibold text-[#17231F] hover:text-[#16745A] transition-colors">
+                      +91 91490 74344
                     </a>
                   </div>
                 </div>
@@ -82,12 +82,12 @@ export const ContactSection: React.FC = () => {
                   <div>
                     <span className="text-xs text-neutral-500 font-medium block">WhatsApp Concierge</span>
                     <a
-                      href={`https://wa.me/919876543210?text=${whatsappMessage}`}
+                      href={`https://wa.me/919149074344?text=${whatsappMessage}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-base font-semibold text-[#17231F] hover:text-[#16745A] transition-colors flex items-center gap-1.5"
                     >
-                      <span>+91 98765 43210</span>
+                      <span>+91 91490 74344</span>
                       <span className="text-[11px] bg-[#25D366]/20 text-[#16745A] font-bold px-1.5 py-0.2 rounded">Chat Now</span>
                     </a>
                   </div>

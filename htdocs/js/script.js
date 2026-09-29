@@ -13,12 +13,12 @@ const BON_CONFIG = {
   brandName: "Bon Holidays",
   tagline: "Stay · Explore · Experience",
   
-  // WhatsApp Number in international format without '+' (e.g., '919876543210' for India)
+  // WhatsApp Number in international format without '+' (e.g., '919149074344' for India)
   // CHANGE THIS NUMBER TO YOUR WHATSAPP BUSINESS NUMBER:
-  whatsappNumber: "919876543210",
+  whatsappNumber: "919149074344",
   
   // Display phone & email
-  phoneDisplay: "+91 98765 43210",
+  phoneDisplay: "+91 91490 74344",
   companyEmail: "info@bonholidays.com",
   officeAddress: "Haridwar - Rishikesh Highway, Tapovan, Uttarakhand 249192",
   
@@ -27,7 +27,7 @@ const BON_CONFIG = {
     facebook: "https://facebook.com/bonholidays",
     instagram: "https://instagram.com/bonholidays",
     youtube: "https://youtube.com/@bonholidays",
-    whatsapp: "https://wa.me/919876543210"
+    whatsapp: "https://wa.me/919149074344"
   },
 
   // GOOGLE FORMS CONNECTION (OPTIONAL):
@@ -677,46 +677,6 @@ function applyCustomImages() {
 function initImageManager() {
   // Apply any custom photos saved previously
   applyCustomImages();
-
-  // Inject "Upload Photos" button into header action zone
-  const actionZone = document.querySelector(".site-header .action-zone");
-  if (actionZone && !document.getElementById("btnUploadNav")) {
-    const uploadBtn = document.createElement("button");
-    uploadBtn.id = "btnUploadNav";
-    uploadBtn.className = "btn-upload-nav";
-    uploadBtn.type = "button";
-    uploadBtn.setAttribute("aria-label", "Upload or customize resort photos");
-    uploadBtn.innerHTML = `
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-        <circle cx="12" cy="13" r="4"/>
-      </svg>
-      <span>Upload Photos</span>
-    `;
-    uploadBtn.addEventListener("click", openImageModal);
-    actionZone.insertBefore(uploadBtn, actionZone.firstChild);
-  }
-
-  // In Gallery page, add upload trigger button next to filter tabs
-  const galleryFilterTabs = document.querySelector(".gallery-filter-tabs");
-  if (galleryFilterTabs && !document.getElementById("galleryUploadBtn")) {
-    const galUploadBtn = document.createElement("button");
-    galUploadBtn.id = "galleryUploadBtn";
-    galUploadBtn.className = "filter-btn";
-    galUploadBtn.style.background = "#f0fdf4";
-    galUploadBtn.style.borderColor = "#16a34a";
-    galUploadBtn.style.color = "#15803d";
-    galUploadBtn.style.fontWeight = "700";
-    galUploadBtn.innerHTML = "📷 + Upload Photo";
-    galUploadBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      openImageModal();
-    });
-    galleryFilterTabs.appendChild(galUploadBtn);
-  }
-
-  // Create Modal HTML if not exists
-  createImageModalDOM();
 }
 
 function createImageModalDOM() {

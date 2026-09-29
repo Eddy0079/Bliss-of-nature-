@@ -312,7 +312,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({
                 </button>
 
                 <a
-                  href={`https://wa.me/919876543210?text=${encodeURIComponent(
+                  href={`https://wa.me/919149074344?text=${encodeURIComponent(
                     `Hello BON Holidays, I would like to inquire about the ${packageData.title} (${packageData.durationText}) package.`
                   )}`}
                   target="_blank"

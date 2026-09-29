@@ -95,12 +95,12 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenB
             {/* Zone 3: 1-2 primary actions */}
             <div className="flex items-center gap-3">
               <a
-                href="tel:+919876543210"
+                href="tel:+919149074344"
                 className="hidden lg:flex items-center gap-1.5 text-xs text-white/70 hover:text-white transition-colors py-1.5 px-2.5 rounded-md hover:bg-white/5"
                 title="Call Reservations"
               >
                 <Phone className="w-3.5 h-3.5 text-[#E8A43A]" />
-                <span className="whitespace-nowrap font-medium">+91 98765 43210</span>
+                <span className="whitespace-nowrap font-medium">+91 91490 74344</span>
               </a>
 
               <button
@@ -167,11 +167,11 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenB
               <span>Certified Uttarakhand Eco-Hospitality Partner</span>
             </div>
             <a
-              href="tel:+919876543210"
+              href="tel:+919149074344"
               className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-lg bg-white/10 text-white font-medium text-sm hover:bg-white/20 transition-colors"
             >
               <Phone className="w-4 h-4 text-[#E8A43A]" />
-              <span>Call: +91 98765 43210</span>
+              <span>Call: +91 91490 74344</span>
             </a>
             <button
               onClick={() => {

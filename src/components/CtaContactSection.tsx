@@ -83,8 +83,8 @@ export const CtaContactSection: React.FC<CtaContactSectionProps> = ({
                   </div>
                   <div>
                     <span className="text-[11px] text-white/60 block">Phone Support</span>
-                    <a href="tel:+919876543210" className="font-semibold text-white hover:text-[#E8A43A] transition-colors">
-                      +91 98765 43210
+                    <a href="tel:+919149074344" className="font-semibold text-white hover:text-[#E8A43A] transition-colors">
+                      +91 91490 74344
                     </a>
                   </div>
                 </div>
@@ -97,12 +97,12 @@ export const CtaContactSection: React.FC<CtaContactSectionProps> = ({
                   <div>
                     <span className="text-[11px] text-white/60 block">WhatsApp Desk</span>
                     <a
-                      href={`https://wa.me/919876543210?text=${whatsappMessage}`}
+                      href={`https://wa.me/919149074344?text=${whatsappMessage}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-semibold text-white hover:text-[#E8A43A] transition-colors"
                     >
-                      +91 98765 43210
+                      +91 91490 74344
                     </a>
                   </div>
                 </div>
@@ -145,7 +145,7 @@ export const CtaContactSection: React.FC<CtaContactSectionProps> = ({
                 </button>
 
                 <a
-                  href={`https://wa.me/919876543210?text=${whatsappMessage}`}
+                  href={`https://wa.me/919149074344?text=${whatsappMessage}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.98] text-white text-xs sm:text-sm font-bold transition-all flex items-center gap-2 shadow-sm"

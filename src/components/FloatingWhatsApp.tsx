@@ -4,7 +4,7 @@ import { MessageCircle, X } from 'lucide-react';
 export const FloatingWhatsApp: React.FC = () => {
   const [showTooltip, setShowTooltip] = useState(true);
 
-  const phone = '919876543210';
+  const phone = '919149074344';
   const message = encodeURIComponent(
     'Hello BON Holidays, I would like to know more about your resorts and holiday packages.'
   );
