@@ -125,12 +125,11 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({
                   {/* Price & Booking Actions */}
                   <div className="pt-6 border-t border-neutral-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div>
-                      <span className="text-xs text-neutral-400 block font-medium">Starting from</span>
+                      <span className="text-xs text-neutral-400 block font-medium">Package Tariff</span>
                       <div className="flex items-baseline gap-1">
-                        <span className="text-3xl font-bold text-[#16745A] font-mono tabular-nums">
-                          ₹{singlePackage.startingPrice.toLocaleString('en-IN')}
+                        <span className="text-2xl font-bold text-[#16745A]">
+                          Available on Request
                         </span>
-                        <span className="text-xs text-neutral-500">/ person (all-inclusive)</span>
                       </div>
                     </div>
 
@@ -233,13 +232,10 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({
 
                   <div className="pt-4 border-t border-neutral-200 flex items-center justify-between">
                     <div>
-                      <span className="text-[11px] text-neutral-500 block font-medium">Starting from</span>
-                      <div className="flex items-baseline gap-1">
-                        <span className="text-xl font-bold text-[#16745A] font-mono tabular-nums">
-                          ₹{pkg.startingPrice.toLocaleString('en-IN')}
-                        </span>
-                        <span className="text-xs text-neutral-500">/ person</span>
-                      </div>
+                      <span className="text-[11px] text-neutral-500 block font-medium">Tariff</span>
+                      <span className="text-sm font-bold text-[#16745A]">
+                        On Request
+                      </span>
                     </div>
 
                     <div className="flex items-center gap-2">

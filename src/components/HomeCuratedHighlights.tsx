@@ -158,12 +158,11 @@ export const HomeCuratedHighlights: React.FC<HomeCuratedHighlightsProps> = ({
                   {/* Price & Action Row */}
                   <div className="pt-4 border-t border-neutral-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div>
-                      <span className="text-[11px] text-neutral-400 block font-medium">Starting from</span>
+                      <span className="text-[11px] text-neutral-400 block font-medium">Tariff</span>
                       <div className="flex items-baseline gap-1">
-                        <span className="text-2xl font-bold text-[#16745A] font-mono tabular-nums">
-                          ₹{blissPackage.startingPrice.toLocaleString('en-IN')}
+                        <span className="text-xl font-bold text-[#16745A]">
+                          Available on Request
                         </span>
-                        <span className="text-xs text-neutral-500">/ person (all-inclusive)</span>
                       </div>
                     </div>
 
@@ -228,11 +227,10 @@ export const HomeCuratedHighlights: React.FC<HomeCuratedHighlightsProps> = ({
 
                   <div className="pt-3 border-t border-neutral-100 flex items-center justify-between">
                     <div>
-                      <span className="text-[10px] text-neutral-400 block font-medium">From</span>
-                      <span className="text-base font-bold text-[#16745A] font-mono tabular-nums">
-                        ₹{resort.startingPrice.toLocaleString('en-IN')}
+                      <span className="text-[10px] text-neutral-400 block font-medium">Tariff</span>
+                      <span className="text-xs font-bold text-[#16745A]">
+                        On Request
                       </span>
-                      <span className="text-[11px] text-neutral-500"> / night</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <button

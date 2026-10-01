@@ -126,9 +126,8 @@ Guest Name: ${guestName}
 Phone: ${guestPhone}
 Guests: ${guestsCount}
 Dates: ${confirmedBooking.dates}
-Total: ₹${confirmedBooking.totalAmount.toLocaleString('en-IN')}
 
-Please confirm availability and booking procedure.`
+Please share room availability and tariff quote.`
     );
   };
 
@@ -205,10 +204,8 @@ Please confirm availability and booking procedure.`
                   </span>
                 </div>
                 <div className="flex justify-between pt-1 text-base font-bold text-[#16745A]">
-                  <span>Total Estimated Amount:</span>
-                  <span className="font-mono tabular-nums">
-                    ₹{confirmedBooking.totalAmount.toLocaleString('en-IN')}
-                  </span>
+                  <span>Tariff Status:</span>
+                  <span>Custom Quote on Request</span>
                 </div>
               </div>
 
@@ -314,7 +311,7 @@ Please confirm availability and booking procedure.`
                     >
                       {currentResort.rooms.map((rm) => (
                         <option key={rm.id} value={rm.id}>
-                          {rm.name} - ₹{rm.pricePerNight.toLocaleString('en-IN')}/nt
+                          {rm.name}
                         </option>
                       ))}
                     </select>
@@ -396,7 +393,7 @@ Please confirm availability and booking procedure.`
                     />
                     <div>
                       <span className="font-semibold block text-neutral-900">16km River Rafting</span>
-                      <span className="text-neutral-500 text-[11px]">+₹1,500 / person</span>
+                      <span className="text-neutral-500 text-[11px]">Guided Adventure Experience</span>
                     </div>
                   </label>
 
@@ -409,7 +406,7 @@ Please confirm availability and booking procedure.`
                     />
                     <div>
                       <span className="font-semibold block text-neutral-900">Airport Pickup (DED)</span>
-                      <span className="text-neutral-500 text-[11px]">+₹2,200 private cab</span>
+                      <span className="text-neutral-500 text-[11px]">Dehradun / Haridwar Transfer</span>
                     </div>
                   </label>
 
@@ -422,7 +419,7 @@ Please confirm availability and booking procedure.`
                     />
                     <div>
                       <span className="font-semibold block text-neutral-900">Campfire BBQ Night</span>
-                      <span className="text-neutral-500 text-[11px]">+₹1,800 / person</span>
+                      <span className="text-neutral-500 text-[11px]">Riverside / Lawn Dining</span>
                     </div>
                   </label>
                 </div>
@@ -469,25 +466,23 @@ Please confirm availability and booking procedure.`
                 />
               </div>
 
-              {/* Real-time Summary Box */}
+              {/* Reservation Details Summary Box */}
               <div className="bg-[#17231F] text-white p-4 rounded-xl space-y-2 text-xs">
                 <div className="flex justify-between text-white/80">
-                  <span>Base Accommodation / Package:</span>
-                  <span className="font-mono tabular-nums">₹{basePrice.toLocaleString('en-IN')}</span>
+                  <span>Selected Stay / Experience:</span>
+                  <span className="font-semibold text-white">{currentResort?.name || currentPackage?.title || 'Selected Stay'}</span>
                 </div>
-                {addOnCost > 0 && (
-                  <div className="flex justify-between text-white/80">
-                    <span>Selected Add-Ons:</span>
-                    <span className="font-mono tabular-nums">₹{addOnCost.toLocaleString('en-IN')}</span>
-                  </div>
-                )}
                 <div className="flex justify-between text-white/80">
-                  <span>Estimated Taxes (12% GST):</span>
-                  <span className="font-mono tabular-nums">₹{gstTaxes.toLocaleString('en-IN')}</span>
+                  <span>Duration:</span>
+                  <span>{checkIn && checkOut ? `${checkIn} to ${checkOut} (${nights} Night${nights > 1 ? 's' : ''})` : 'Flexible Dates'}</span>
                 </div>
-                <div className="flex justify-between text-sm sm:text-base font-bold text-[#E8A43A] pt-2 border-t border-white/20">
-                  <span>Total Estimated Amount:</span>
-                  <span className="font-mono tabular-nums">₹{grandTotal.toLocaleString('en-IN')}</span>
+                <div className="flex justify-between text-white/80">
+                  <span>Guests & Rooms:</span>
+                  <span>{guestsCount} Guest(s) · {roomsCount} Room(s)</span>
+                </div>
+                <div className="flex justify-between text-sm font-bold text-[#E8A43A] pt-2 border-t border-white/20">
+                  <span>Tariff:</span>
+                  <span>Available on Request</span>
                 </div>
               </div>
 

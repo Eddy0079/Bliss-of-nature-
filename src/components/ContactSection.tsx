@@ -140,11 +140,12 @@ export const ContactSection: React.FC = () => {
                 </span>
                 <div className="flex items-center gap-3">
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/bliss.of.nature.resort?stkn=Zmh6dXR0czdqNHBj"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-lg bg-[#F5F7F6] hover:bg-[#16745A] hover:text-white text-neutral-700 flex items-center justify-center transition-colors"
+                    className="w-9 h-9 rounded-lg bg-[#F5F7F6] hover:bg-[#E1306C] hover:text-white text-neutral-700 flex items-center justify-center transition-colors"
                     aria-label="Instagram"
+                    title="Follow Bliss of Nature on Instagram"
                   >
                     <Instagram className="w-4 h-4" />
                   </a>
@@ -152,17 +153,29 @@ export const ContactSection: React.FC = () => {
                     href="https://www.facebook.com/profile.php?id=61594779811083"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-lg bg-[#F5F7F6] hover:bg-[#16745A] hover:text-white text-neutral-700 flex items-center justify-center transition-colors"
+                    className="w-9 h-9 rounded-lg bg-[#F5F7F6] hover:bg-[#1877F2] hover:text-white text-neutral-700 flex items-center justify-center transition-colors"
                     aria-label="Facebook"
+                    title="Follow BON Holidays on Facebook"
                   >
                     <Facebook className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://wa.me/919149074344"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 rounded-lg bg-[#F5F7F6] hover:bg-[#25D366] hover:text-white text-neutral-700 flex items-center justify-center transition-colors"
+                    aria-label="WhatsApp"
+                    title="Chat on WhatsApp"
+                  >
+                    <MessageCircle className="w-4 h-4" />
                   </a>
                   <a
                     href="https://youtube.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-lg bg-[#F5F7F6] hover:bg-[#16745A] hover:text-white text-neutral-700 flex items-center justify-center transition-colors"
+                    className="w-9 h-9 rounded-lg bg-[#F5F7F6] hover:bg-[#FF0000] hover:text-white text-neutral-700 flex items-center justify-center transition-colors"
                     aria-label="YouTube"
+                    title="Subscribe on YouTube"
                   >
                     <Youtube className="w-4 h-4" />
                   </a>

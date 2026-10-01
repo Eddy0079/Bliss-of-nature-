@@ -126,12 +126,11 @@ export const FeaturedResort: React.FC<FeaturedResortProps> = ({
             <div className="space-y-4">
               <div className="flex items-baseline justify-between border-b border-neutral-200 pb-3">
                 <div>
-                  <span className="text-xs text-neutral-500 font-medium">Starting from</span>
+                  <span className="text-xs text-neutral-500 font-medium">Tariff</span>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-2xl sm:text-3xl font-bold text-[#16745A] font-mono tabular-nums">
-                      ₹{resort.startingPrice.toLocaleString('en-IN')}
+                    <span className="text-xl sm:text-2xl font-bold text-[#16745A]">
+                      Available on Request
                     </span>
-                    <span className="text-xs text-neutral-500">/ night + taxes</span>
                   </div>
                 </div>
                 <div className="text-right">

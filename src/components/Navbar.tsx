@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PageView } from '../types';
-import { Menu, X, Phone, Calendar, Compass, ShieldCheck, Facebook } from 'lucide-react';
+import { Menu, X, Phone, Calendar, Compass, ShieldCheck, Facebook, Instagram, MessageCircle } from 'lucide-react';
 
 interface NavbarProps {
   currentPage: PageView;
@@ -93,7 +93,18 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenB
             </nav>
 
             {/* Zone 3: 1-2 primary actions */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <a
+                href="https://www.instagram.com/bliss.of.nature.resort?stkn=Zmh6dXR0czdqNHBj"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:flex items-center gap-1.5 text-xs text-white/80 hover:text-white transition-colors py-1.5 px-2.5 rounded-md hover:bg-white/10"
+                title="Follow Bliss of Nature on Instagram"
+              >
+                <Instagram className="w-3.5 h-3.5 text-[#E1306C]" />
+                <span className="whitespace-nowrap font-medium">Instagram</span>
+              </a>
+
               <a
                 href="https://www.facebook.com/profile.php?id=61594779811083"
                 target="_blank"
@@ -103,6 +114,17 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenB
               >
                 <Facebook className="w-3.5 h-3.5 text-[#1877F2]" />
                 <span className="whitespace-nowrap font-medium">Facebook</span>
+              </a>
+
+              <a
+                href="https://wa.me/919149074344"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden xl:flex items-center gap-1.5 text-xs text-white/80 hover:text-white transition-colors py-1.5 px-2.5 rounded-md hover:bg-white/10"
+                title="Chat on WhatsApp"
+              >
+                <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
+                <span className="whitespace-nowrap font-medium">WhatsApp</span>
               </a>
 
               <a
@@ -178,6 +200,15 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenB
               <span>Certified Uttarakhand Eco-Hospitality Partner</span>
             </div>
             <a
+              href="https://www.instagram.com/bliss.of.nature.resort?stkn=Zmh6dXR0czdqNHBj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-lg bg-gradient-to-r from-[#833ab4]/20 via-[#fd1d1d]/20 to-[#fcb045]/20 border border-[#E1306C]/40 text-white font-medium text-sm hover:opacity-90 transition-opacity"
+            >
+              <Instagram className="w-4 h-4 text-[#E1306C]" />
+              <span>Follow on Instagram</span>
+            </a>
+            <a
               href="https://www.facebook.com/profile.php?id=61594779811083"
               target="_blank"
               rel="noopener noreferrer"
@@ -185,6 +216,15 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenB
             >
               <Facebook className="w-4 h-4 text-[#1877F2]" />
               <span>Follow on Facebook</span>
+            </a>
+            <a
+              href="https://wa.me/919149074344"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-lg bg-[#25D366]/20 border border-[#25D366]/40 text-white font-medium text-sm hover:bg-[#25D366]/30 transition-colors"
+            >
+              <MessageCircle className="w-4 h-4 text-[#25D366]" />
+              <span>Chat on WhatsApp</span>
             </a>
             <a
               href="tel:+919149074344"

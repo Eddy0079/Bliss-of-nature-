@@ -272,12 +272,11 @@ export const BlissOfNaturePage: React.FC<BlissOfNaturePageProps> = ({
 
                   <div className="pt-4 border-t border-neutral-100 flex items-center justify-between">
                     <div>
-                      <span className="text-[10px] text-neutral-400 block font-medium">Rate per night</span>
+                      <span className="text-[10px] text-neutral-400 block font-medium">Tariff</span>
                       <div className="flex items-baseline gap-1">
-                        <span className="text-xl font-bold text-[#16745A] font-mono tabular-nums">
-                          ₹{room.pricePerNight.toLocaleString('en-IN')}
+                        <span className="text-sm font-bold text-[#16745A]">
+                          Available on Request
                         </span>
-                        <span className="text-xs text-neutral-500">+ taxes</span>
                       </div>
                     </div>
 
@@ -285,7 +284,7 @@ export const BlissOfNaturePage: React.FC<BlissOfNaturePageProps> = ({
                       onClick={() => onBookRoom(resort.id, room.id)}
                       className="px-4 py-2.5 rounded-lg bg-[#16745A] hover:bg-[#0D5743] text-white text-xs font-semibold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
                     >
-                      <span>Book This Room</span>
+                      <span>Enquire / Book</span>
                       <ArrowRight className="w-3.5 h-3.5 text-[#E8A43A]" />
                     </button>
                   </div>
@@ -469,9 +468,9 @@ export const BlissOfNaturePage: React.FC<BlissOfNaturePageProps> = ({
       {/* Sticky Mobile Booking Button */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-30 p-3 bg-white/95 backdrop-blur-md border-t border-neutral-200 shadow-xl flex items-center justify-between gap-3">
         <div>
-          <span className="text-[10px] text-neutral-500 block">From</span>
-          <span className="text-base font-bold text-[#16745A] font-mono tabular-nums">
-            ₹{resort.startingPrice.toLocaleString('en-IN')}/nt
+          <span className="text-[10px] text-neutral-500 block">Tariff</span>
+          <span className="text-xs font-bold text-[#16745A]">
+            On Request
           </span>
         </div>
         <button

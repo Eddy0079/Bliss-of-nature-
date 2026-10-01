@@ -83,12 +83,12 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({
 
           <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/20">
             <div>
-              <span className="text-xs text-white/70 block">Starting from</span>
+              <span className="text-xs text-white/70 block">Package Tariff</span>
               <div className="flex items-baseline gap-1">
-                <span className="text-2xl sm:text-3xl font-bold text-white font-mono tabular-nums">
-                  ₹{packageData.startingPrice.toLocaleString('en-IN')}
+                <span className="text-2xl sm:text-3xl font-bold text-white">
+                  Available on Request
                 </span>
-                <span className="text-xs text-white/70">/ person (inclusive of stays & transfers)</span>
+                <span className="text-xs text-white/70 ml-2">(inclusive of stays & transfers)</span>
               </div>
             </div>
 
@@ -275,12 +275,11 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({
           <div className="lg:col-span-4 sticky top-24 space-y-6">
             <div className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-md space-y-6">
               <div className="space-y-1">
-                <span className="text-xs text-neutral-500 font-medium">Starting from</span>
+                <span className="text-xs text-neutral-500 font-medium">Package Tariff</span>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-3xl font-bold text-[#16745A] font-mono tabular-nums">
-                    ₹{packageData.startingPrice.toLocaleString('en-IN')}
+                  <span className="text-2xl font-bold text-[#16745A]">
+                    Available on Request
                   </span>
-                  <span className="text-xs text-neutral-500">/ person</span>
                 </div>
                 <p className="text-[11px] text-neutral-400">
                   Customizable for couples, families, and group travelers.

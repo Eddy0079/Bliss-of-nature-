@@ -153,12 +153,11 @@ export const ResortsSection: React.FC<ResortsSectionProps> = ({
                 {/* Price & Action Row */}
                 <div className="pt-4 border-t border-neutral-100 flex items-center justify-between">
                   <div>
-                    <span className="text-[10px] text-neutral-400 block font-medium">Starting from</span>
+                    <span className="text-[10px] text-neutral-400 block font-medium">Tariff</span>
                     <div className="flex items-baseline gap-1">
-                      <span className="text-lg font-bold text-[#16745A] font-mono tabular-nums">
-                        ₹{resort.startingPrice.toLocaleString('en-IN')}
+                      <span className="text-xs font-bold text-[#16745A]">
+                        On Request
                       </span>
-                      <span className="text-[11px] text-neutral-500">/ night</span>
                     </div>
                   </div>
 

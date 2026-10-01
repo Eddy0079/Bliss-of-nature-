@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#166534" />
+      <stop offset="50%" stop-color="#15803d" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+  </defs>
+  <!-- Mountain & Sun Icon -->
+  <g transform="translate(10, 10)">
+    <circle cx="28" cy="20" r="10" fill="url(#goldGrad)" opacity="0.9" />
+    <!-- Peaks -->
+    <polygon points="4,52 24,20 44,52" fill="#14532d" />
+    <polygon points="22,52 38,26 56,52" fill="#15803d" opacity="0.9" />
+    <polygon points="24,20 20,28 28,28" fill="#ffffff" opacity="0.9" />
+    <polygon points="38,26 34,33 42,33" fill="#ffffff" opacity="0.9" />
+    <path d="M12 50 C24 46 36 46 48 50" stroke="#ca8a04" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  </g>
+  <!-- Text Brand -->
+  <text x="75" y="38" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="700" fill="#14532d" letter-spacing="1.5">BON HOLIDAYS</text>
+  <text x="76" y="54" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#d97706" letter-spacing="3.5">STAY · EXPLORE · EXPERIENCE</text>
+</svg>

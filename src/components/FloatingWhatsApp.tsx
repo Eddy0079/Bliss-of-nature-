@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, Facebook, X } from 'lucide-react';
+import { MessageCircle, Facebook, Instagram, X } from 'lucide-react';
 
 export const FloatingWhatsApp: React.FC = () => {
   const [showTooltip, setShowTooltip] = useState(true);
@@ -27,9 +27,15 @@ export const FloatingWhatsApp: React.FC = () => {
           animation-play-state: paused;
         }
         .animate-float-vertical-delayed {
-          animation: floatOscillate 3.2s ease-in-out infinite 0.4s;
+          animation: floatOscillate 3.2s ease-in-out infinite 0.3s;
         }
         .animate-float-vertical-delayed:hover {
+          animation-play-state: paused;
+        }
+        .animate-float-vertical-delayed-2 {
+          animation: floatOscillate 3.2s ease-in-out infinite 0.6s;
+        }
+        .animate-float-vertical-delayed-2:hover {
           animation-play-state: paused;
         }
       `}</style>
@@ -38,7 +44,7 @@ export const FloatingWhatsApp: React.FC = () => {
         {showTooltip && (
           <div className="hidden sm:flex items-center gap-2 bg-[#17231F] text-white text-xs py-2 px-3.5 rounded-xl shadow-xl border border-white/10 animate-in fade-in slide-in-from-right-2 duration-300 mb-1">
             <div className="w-2 h-2 rounded-full bg-[#25D366] animate-ping" />
-            <span>Chat or Follow Us</span>
+            <span>Connect on Instagram, Facebook & WhatsApp</span>
             <button
               onClick={() => setShowTooltip(false)}
               className="text-white/60 hover:text-white ml-1 p-0.5"
@@ -50,6 +56,18 @@ export const FloatingWhatsApp: React.FC = () => {
         )}
 
         <div className="flex items-center gap-2.5">
+          {/* Floating Instagram Button */}
+          <a
+            href="https://www.instagram.com/bliss.of.nature.resort?stkn=Zmh6dXR0czdqNHBj"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Bliss of Nature on Instagram"
+            className="group relative w-12 h-12 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] active:scale-95 text-white flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-105 animate-float-vertical-delayed-2"
+          >
+            <Instagram className="w-5 h-5" />
+            <span className="sr-only">Follow Bliss of Nature on Instagram</span>
+          </a>
+
           {/* Floating Facebook Button */}
           <a
             href="https://www.facebook.com/profile.php?id=61594779811083"
@@ -58,7 +76,7 @@ export const FloatingWhatsApp: React.FC = () => {
             aria-label="Visit BON Holidays on Facebook"
             className="group relative w-12 h-12 rounded-full bg-[#1877F2] hover:bg-[#166fe5] active:scale-95 text-white flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-105 animate-float-vertical-delayed"
           >
-            <Facebook className="w-6 h-6" />
+            <Facebook className="w-5 h-5" />
             <span className="sr-only">Visit BON Holidays on Facebook</span>
           </a>
 

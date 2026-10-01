@@ -1,0 +1,558 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1000' width='1600' height='1000'>
+  <defs>
+    <!-- Sky & Atmosphere Gradients -->
+    <linearGradient id='skyGrad' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#0f4c81' />
+      <stop offset='25%' stop-color='#1a6fb0' />
+      <stop offset='55%' stop-color='#4ca8dc' />
+      <stop offset='85%' stop-color='#a1d4f0' />
+      <stop offset='100%' stop-color='#fbf3de' />
+    </linearGradient>
+
+    <!-- Mountain Gradients -->
+    <linearGradient id='farSnowPeakGrad' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#ffffff' />
+      <stop offset='40%' stop-color='#f1f5f9' />
+      <stop offset='75%' stop-color='#cbd5e1' />
+      <stop offset='100%' stop-color='#94a3b8' />
+    </linearGradient>
+
+    <linearGradient id='peakShadowGrad' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0%' stop-color='#475569' />
+      <stop offset='100%' stop-color='#334155' />
+    </linearGradient>
+
+    <linearGradient id='midRidgeGrad1' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#3b6852' />
+      <stop offset='100%' stop-color='#1e3a29' />
+    </linearGradient>
+
+    <linearGradient id='midRidgeGrad2' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#2d5a3f' />
+      <stop offset='100%' stop-color='#163820' />
+    </linearGradient>
+
+    <linearGradient id='nearRidgeGrad' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#234f31' />
+      <stop offset='100%' stop-color='#0f2817' />
+    </linearGradient>
+
+    <!-- Valley Mist -->
+    <linearGradient id='valleyMist' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#ffffff' stop-opacity='0' />
+      <stop offset='50%' stop-color='#ffffff' stop-opacity='0.45' />
+      <stop offset='100%' stop-color='#f8fafc' stop-opacity='0.1' />
+    </linearGradient>
+
+    <!-- Lawn Gradients -->
+    <linearGradient id='lawnGrad' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#4ade80' />
+      <stop offset='30%' stop-color='#22c55e' />
+      <stop offset='70%' stop-color='#16a34a' />
+      <stop offset='100%' stop-color='#15803d' />
+    </linearGradient>
+
+    <!-- Wood Textures & Siding Gradients -->
+    <linearGradient id='woodWallDark' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#78350f' />
+      <stop offset='50%' stop-color='#5e2609' />
+      <stop offset='100%' stop-color='#451a03' />
+    </linearGradient>
+
+    <linearGradient id='woodWallWarm' x1='0' y1='0' x2='1' y2='0'>
+      <stop offset='0%' stop-color='#9a3412' />
+      <stop offset='40%' stop-color='#b45309' />
+      <stop offset='70%' stop-color='#c2410c' />
+      <stop offset='100%' stop-color='#7c2d12' />
+    </linearGradient>
+
+    <linearGradient id='woodTrim' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#451a03' />
+      <stop offset='100%' stop-color='#290d02' />
+    </linearGradient>
+
+    <!-- Roof Shingle Gradients -->
+    <linearGradient id='roofGrad' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#334155' />
+      <stop offset='45%' stop-color='#1e293b' />
+      <stop offset='100%' stop-color='#0f172a' />
+    </linearGradient>
+
+    <linearGradient id='roofHighlight' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0%' stop-color='#475569' />
+      <stop offset='100%' stop-color='#1e293b' />
+    </linearGradient>
+
+    <!-- Glass Window Gradients -->
+    <linearGradient id='windowReflection' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0%' stop-color='#38bdf8' stop-opacity='0.85' />
+      <stop offset='35%' stop-color='#bae6fd' stop-opacity='0.9' />
+      <stop offset='70%' stop-color='#1e3a8a' stop-opacity='0.75' />
+      <stop offset='100%' stop-color='#fef08a' stop-opacity='0.5' />
+    </linearGradient>
+
+    <!-- Stone Foundation Gradients -->
+    <linearGradient id='stoneGrad' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#64748b' />
+      <stop offset='50%' stop-color='#475569' />
+      <stop offset='100%' stop-color='#334155' />
+    </linearGradient>
+
+    <!-- Subtle Vignette -->
+    <radialGradient id='vignette' cx='50%' cy='50%' r='70%'>
+      <stop offset='55%' stop-color='#000000' stop-opacity='0' />
+      <stop offset='85%' stop-color='#000000' stop-opacity='0.15' />
+      <stop offset='100%' stop-color='#000000' stop-opacity='0.35' />
+    </radialGradient>
+  </defs>
+
+  <!-- 1. Sky Background -->
+  <rect width='1600' height='1000' fill='url(#skyGrad)' />
+
+  <!-- 2. Gentle Himalayan Clouds -->
+  <g fill='#ffffff' opacity='0.75'>
+    <!-- Cloud Cluster 1 Left -->
+    <ellipse cx='280' cy='160' rx='140' ry='32' filter='blur(4px)' />
+    <ellipse cx='340' cy='145' rx='90' ry='28' filter='blur(3px)' />
+    <ellipse cx='220' cy='155' rx='80' ry='24' filter='blur(4px)' />
+    
+    <!-- Cloud Cluster 2 Center/Right -->
+    <ellipse cx='1050' cy='130' rx='210' ry='42' filter='blur(5px)' />
+    <ellipse cx='1130' cy='115' rx='120' ry='35' filter='blur(4px)' />
+    <ellipse cx='960' cy='135' rx='110' ry='28' filter='blur(5px)' />
+
+    <!-- Thin High Altitude Cirrus Wisps -->
+    <path d='M600,110 Q780,85 1000,105 Q1250,90 1480,120' stroke='#ffffff' stroke-width='14' fill='none' opacity='0.3' stroke-linecap='round' filter='blur(6px)' />
+    <path d='M80,190 Q280,165 480,185' stroke='#ffffff' stroke-width='10' fill='none' opacity='0.25' stroke-linecap='round' filter='blur(5px)' />
+  </g>
+
+  <!-- 3. Snow-Dusted Great Himalayan High Peaks (Bandarpoonch & Chaukhamba) -->
+  <g>
+    <!-- Distant Peak 1 (Left-Center) -->
+    <polygon points='380,310 520,180 670,320 620,335 440,330' fill='url(#peakShadowGrad)' opacity='0.8' />
+    <polygon points='520,180 575,230 550,225 590,265 670,320 520,180' fill='#ffffff' opacity='0.9' />
+    <polygon points='430,260 480,215 520,180 470,250 440,285' fill='#f8fafc' opacity='0.95' />
+    
+    <!-- Distant Peak 2 (Center) -->
+    <polygon points='640,320 810,150 990,320 890,330 730,325' fill='url(#peakShadowGrad)' opacity='0.85' />
+    <polygon points='810,150 870,210 840,205 910,270 990,320 810,150' fill='#ffffff' opacity='0.95' />
+    <polygon points='700,240 760,195 810,150 750,240 710,290' fill='#e2e8f0' opacity='0.9' />
+
+    <!-- Distant Peak 3 (Right) -->
+    <polygon points='960,320 1140,195 1320,330 1200,340 1050,335' fill='url(#peakShadowGrad)' opacity='0.75' />
+    <polygon points='1140,195 1210,255 1180,250 1250,295 1320,330 1140,195' fill='#ffffff' opacity='0.9' />
+  </g>
+
+  <!-- 4. Valley Mist Layer -->
+  <rect x='0' y='280' width='1600' height='90' fill='url(#valleyMist)' />
+
+  <!-- 5. Intermediate Himalayan Mountain Forest Ridges -->
+  <!-- Ridge 3: Furthest green ridge -->
+  <path d='M0,360 Q340,300 750,345 T1600,330 L1600,600 L0,600 Z' fill='url(#midRidgeGrad1)' opacity='0.9' />
+
+  <!-- Soft Mist Ribbon -->
+  <ellipse cx='780' cy='360' rx='600' ry='30' fill='#ffffff' opacity='0.35' filter='blur(6px)' />
+
+  <!-- Ridge 2: Mid-range forested ridge with dense pines -->
+  <path d='M0,410 Q450,360 920,415 T1600,380 L1600,700 L0,700 Z' fill='url(#midRidgeGrad2)' />
+
+  <!-- Pine Tree Silhouettes on Ridge 2 -->
+  <g fill='#13301c' opacity='0.85'>
+    <!-- Pine row across mid horizon -->
+    <path d='
+      M0,412 l15,-32 l15,32 l10,-28 l10,28 l12,-35 l12,35 l18,-30 l18,30 l14,-38 l14,38
+      l22,-28 l22,28 l16,-34 l16,34 l20,-30 l20,30 l18,-40 l18,40 l24,-32 l24,32
+      l15,-36 l15,36 l25,-26 l25,26 l18,-42 l18,42 l20,-30 l20,30 l15,-35 l15,35
+      l28,-28 l28,28 l16,-45 l16,45 l22,-32 l22,32 l18,-38 l18,38 l25,-28 l25,28
+      l15,-34 l15,34 l20,-42 l20,42 l24,-30 l24,30 l18,-36 l18,36 l22,-28 l22,28
+      l14,-40 l14,40 l26,-32 l26,32 l18,-35 l18,35 l20,-28 l20,28 l16,-44 l16,44
+      l24,-30 l24,30 l18,-36 l18,36 l22,-28 l22,28 l15,-40 l15,40 l25,-32 l25,32
+      l20,-36 l20,36 l18,-28 l18,28 l16,-42 l16,42 l24,-30 l24,30 l18,-38 l18,38
+      l22,-28 l22,28 l15,-35 l15,35 l25,-40 l25,40 l18,-30 l18,30 l20,-34 l20,34
+      L1600,450 L1600,520 L0,520 Z
+    ' />
+  </g>
+
+  <!-- Ridge 1: Immediate mountain flank leading into resort grounds -->
+  <path d='M0,480 Q520,440 1080,490 L1600,460 L1600,850 L0,850 Z' fill='url(#nearRidgeGrad)' />
+
+  <!-- Prominent Pine & Deodar Trees on Left/Background Flank -->
+  <g fill='#0c2113'>
+    <!-- Large Deodar Tree Cluster (Far Left Background) -->
+    <polygon points='35,530 65,370 95,530' />
+    <polygon points='25,520 65,390 105,520' />
+    <polygon points='15,500 65,420 115,500' />
+    <rect x='60' y='530' width='10' height='55' fill='#3e2716' />
+
+    <polygon points='80,510 115,350 150,510' />
+    <polygon points='70,490 115,375 160,490' />
+    <polygon points='60,470 115,410 170,470' />
+    <rect x='110' y='510' width='11' height='60' fill='#3e2716' />
+
+    <polygon points='145,540 180,390 215,540' />
+    <polygon points='135,520 180,415 225,520' />
+    <rect x='175' y='540' width='10' height='45' fill='#3e2716' />
+
+    <!-- Pine Cluster Behind Right Wing -->
+    <polygon points='1380,510 1420,350 1460,510' />
+    <polygon points='1370,490 1420,380 1470,490' />
+    <polygon points='1360,470 1420,410 1480,470' />
+    <rect x='1415' y='510' width='12' height='65' fill='#3e2716' />
+
+    <polygon points='1445,530 1485,380 1525,530' />
+    <polygon points='1435,510 1485,410 1535,510' />
+    <rect x='1480' y='530' width='11' height='50' fill='#3e2716' />
+
+    <polygon points='1510,500 1550,330 1590,500' />
+    <rect x='1545' y='500' width='12' height='75' fill='#3e2716' />
+  </g>
+
+  <!-- 6. Resort Terraces & Manicured Hillside Grounds -->
+  <!-- Upper Terrace Step -->
+  <path d='M0,580 Q480,550 1000,570 T1600,560 L1600,1000 L0,1000 Z' fill='url(#lawnGrad)' />
+
+  <!-- Lower Main Terrace Lawn with Natural Sloping Horizon -->
+  <path d='M0,640 Q400,610 950,630 T1600,620 L1600,1000 L0,1000 Z' fill='#22c55e' />
+  <path d='M0,680 Q520,640 1150,670 T1600,650 L1600,1000 L0,1000 Z' fill='url(#lawnGrad)' />
+
+  <!-- Rustic Mountain Stone Retaining Wall supporting the Chalet Terrace -->
+  <g fill='url(#stoneGrad)'>
+    <path d='M180,680 L1350,650 L1350,715 L180,745 Z' />
+    <!-- Individual Slate Stones in Retaining Wall -->
+    <rect x='200' y='685' width='70' height='22' rx='2' fill='#475569' stroke='#1e293b' stroke-width='1.5' />
+    <rect x='275' y='683' width='90' height='24' rx='2' fill='#64748b' stroke='#1e293b' stroke-width='1.5' />
+    <rect x='370' y='681' width='85' height='23' rx='2' fill='#526173' stroke='#1e293b' stroke-width='1.5' />
+    <rect x='460' y='679' width='100' height='25' rx='2' fill='#64748b' stroke='#1e293b' stroke-width='1.5' />
+    <rect x='565' y='677' width='75' height='24' rx='2' fill='#475569' stroke='#1e293b' stroke-width='1.5' />
+    <rect x='645' y='675' width='95' height='23' rx='2' fill='#5a6a7c' stroke='#1e293b' stroke-width='1.5' />
+    <rect x='745' y='673' width='85' height='24' rx='2' fill='#64748b' stroke='#1e293b' stroke-width='1.5' />
+    <rect x='835' y='670' width='90' height='25' rx='2' fill='#475569' stroke='#1e293b' stroke-width='1.5' />
+    <rect x='930' y='668' width='80' height='24' rx='2' fill='#5e6f82' stroke='#1e293b' stroke-width='1.5' />
+    <rect x='1015' y='666' width='95' height='23' rx='2' fill='#64748b' stroke='#1e293b' stroke-width='1.5' />
+    <rect x='1115' y='663' width='85' height='24' rx='2' fill='#475569' stroke='#1e293b' stroke-width='1.5' />
+    <rect x='1205' y='660' width='90' height='23' rx='2' fill='#58687a' stroke='#1e293b' stroke-width='1.5' />
+
+    <!-- Second Row of Wall Stones -->
+    <rect x='185' y='710' width='85' height='26' rx='2' fill='#334155' stroke='#0f172a' stroke-width='1.5' />
+    <rect x='275' y='709' width='95' height='25' rx='2' fill='#475569' stroke='#0f172a' stroke-width='1.5' />
+    <rect x='375' y='707' width='80' height='26' rx='2' fill='#3a4859' stroke='#0f172a' stroke-width='1.5' />
+    <rect x='460' y='706' width='105' height='25' rx='2' fill='#475569' stroke='#0f172a' stroke-width='1.5' />
+    <rect x='570' y='704' width='90' height='26' rx='2' fill='#334155' stroke='#0f172a' stroke-width='1.5' />
+    <rect x='665' y='702' width='85' height='25' rx='2' fill='#475569' stroke='#0f172a' stroke-width='1.5' />
+    <rect x='755' y='700' width='100' height='25' rx='2' fill='#3b4a5b' stroke='#0f172a' stroke-width='1.5' />
+    <rect x='860' y='698' width='85' height='26' rx='2' fill='#475569' stroke='#0f172a' stroke-width='1.5' />
+    <rect x='950' y='696' width='95' height='25' rx='2' fill='#334155' stroke='#0f172a' stroke-width='1.5' />
+    <rect x='1050' y='693' width='85' height='25' rx='2' fill='#475569' stroke='#0f172a' stroke-width='1.5' />
+    <rect x='1140' y='690' width='100' height='24' rx='2' fill='#384656' stroke='#0f172a' stroke-width='1.5' />
+    <rect x='1245' y='687' width='80' height='24' rx='2' fill='#475569' stroke='#0f172a' stroke-width='1.5' />
+  </g>
+
+  <!-- =========================================================================
+       7. THE SIGNATURE BLISS OF NATURE WOODEN CHALET RESORT STRUCTURE
+       ========================================================================= -->
+  <g id='blissChalet' transform='translate(220, 290)'>
+    <!-- Shadow cast by the building on the terrace -->
+    <polygon points='0,390 850,360 920,440 40,470' fill='#000000' opacity='0.22' filter='blur(8px)' />
+
+    <!-- Chalet Main Wing: Stone Masonry Foundation Ground Level -->
+    <rect x='100' y='270' width='440' height='110' fill='url(#stoneGrad)' stroke='#1e293b' stroke-width='2' />
+    
+    <!-- Stone Texture Plinth Lines -->
+    <line x1='100' y1='305' x2='540' y2='305' stroke='#1e293b' stroke-width='1.5' />
+    <line x1='100' y1='342' x2='540' y2='342' stroke='#1e293b' stroke-width='1.5' />
+    <line x1='210' y1='270' x2='210' y2='305' stroke='#1e293b' stroke-width='1.5' />
+    <line x1='360' y1='270' x2='360' y2='305' stroke='#1e293b' stroke-width='1.5' />
+    <line x1='160' y1='305' x2='160' y2='342' stroke='#1e293b' stroke-width='1.5' />
+    <line x1='300' y1='305' x2='300' y2='342' stroke='#1e293b' stroke-width='1.5' />
+    <line x1='450' y1='305' x2='450' y2='342' stroke='#1e293b' stroke-width='1.5' />
+    <line x1='250' y1='342' x2='250' y2='380' stroke='#1e293b' stroke-width='1.5' />
+    <line x1='400' y1='342' x2='400' y2='380' stroke='#1e293b' stroke-width='1.5' />
+
+    <!-- Main Ground Floor Entrance French Doors / Panoramic Glass -->
+    <rect x='140' y='285' width='120' height='85' fill='#1e293b' stroke='#0f172a' stroke-width='3' />
+    <rect x='146' y='291' width='52' height='73' fill='url(#windowReflection)' />
+    <rect x='202' y='291' width='52' height='73' fill='url(#windowReflection)' />
+    <!-- Window Glazing Bars -->
+    <line x1='146' y1='327' x2='198' y2='327' stroke='#0f172a' stroke-width='2' />
+    <line x1='202' y1='327' x2='254' y2='327' stroke='#0f172a' stroke-width='2' />
+
+    <!-- Ground Floor Window 2 -->
+    <rect x='340' y='285' width='140' height='80' fill='#1e293b' stroke='#0f172a' stroke-width='3' />
+    <rect x='346' y='291' width='62' height='68' fill='url(#windowReflection)' />
+    <rect x='412' y='291' width='62' height='68' fill='url(#windowReflection)' />
+    <line x1='346' y1='325' x2='408' y2='325' stroke='#0f172a' stroke-width='2' />
+    <line x1='412' y1='325' x2='474' y2='325' stroke='#0f172a' stroke-width='2' />
+
+    <!-- Chalet First Floor: Rich Himalayan Cedar Wood Walls -->
+    <rect x='100' y='140' width='440' height='130' fill='url(#woodWallWarm)' stroke='#451a03' stroke-width='2' />
+    
+    <!-- Horizontal Pine Planks Detailing -->
+    <g stroke='#5e2609' stroke-width='1.5'>
+      <line x1='100' y1='152' x2='540' y2='152' />
+      <line x1='100' y1='164' x2='540' y2='164' />
+      <line x1='100' y1='176' x2='540' y2='176' />
+      <line x1='100' y1='188' x2='540' y2='188' />
+      <line x1='100' y1='200' x2='540' y2='200' />
+      <line x1='100' y1='212' x2='540' y2='212' />
+      <line x1='100' y1='224' x2='540' y2='224' />
+      <line x1='100' y1='236' x2='540' y2='236' />
+      <line x1='100' y1='248' x2='540' y2='248' />
+      <line x1='100' y1='260' x2='540' y2='260' />
+    </g>
+
+    <!-- First Floor Panoramic Viewing Windows -->
+    <g>
+      <!-- Suite 1 Glass Window -->
+      <rect x='130' y='160' width='140' height='80' fill='#290d02' stroke='#1c0801' stroke-width='3' rx='2' />
+      <rect x='136' y='166' width='62' height='68' fill='url(#windowReflection)' />
+      <rect x='202' y='166' width='62' height='68' fill='url(#windowReflection)' />
+      <!-- Warm Interior Sunset Lamp Glow inside Room -->
+      <circle cx='165' cy='198' r='14' fill='#fef08a' opacity='0.7' filter='blur(4px)' />
+      <!-- Window Grids -->
+      <line x1='136' y1='200' x2='198' y2='200' stroke='#290d02' stroke-width='2' />
+      <line x1='202' y1='200' x2='264' y2='200' stroke='#290d02' stroke-width='2' />
+
+      <!-- Suite 2 Glass Window -->
+      <rect x='340' y='160' width='140' height='80' fill='#290d02' stroke='#1c0801' stroke-width='3' rx='2' />
+      <rect x='346' y='166' width='62' height='68' fill='url(#windowReflection)' />
+      <rect x='412' y='166' width='62' height='68' fill='url(#windowReflection)' />
+      <circle cx='445' cy='198' r='14' fill='#fef08a' opacity='0.7' filter='blur(4px)' />
+      <line x1='346' y1='200' x2='408' y2='200' stroke='#290d02' stroke-width='2' />
+      <line x1='412' y1='200' x2='474' y2='200' stroke='#290d02' stroke-width='2' />
+    </g>
+
+    <!-- Upper Level Wooden Veranda / Private Balcony Overlook -->
+    <g id='upperBalcony'>
+      <!-- Balcony Floor Decking -->
+      <rect x='90' y='240' width='460' height='14' fill='url(#woodTrim)' />
+      <!-- Balcony Top Rail -->
+      <rect x='90' y='205' width='460' height='7' fill='#5c2306' stroke='#290d02' stroke-width='1.5' />
+      <!-- Balcony Posts & Spindles -->
+      <line x1='105' y1='212' x2='105' y2='240' stroke='#3e1602' stroke-width='6' />
+      <line x1='170' y1='212' x2='170' y2='240' stroke='#3e1602' stroke-width='5' />
+      <line x1='235' y1='212' x2='235' y2='240' stroke='#3e1602' stroke-width='5' />
+      <line x1='300' y1='212' x2='300' y2='240' stroke='#3e1602' stroke-width='5' />
+      <line x1='365' y1='212' x2='365' y2='240' stroke='#3e1602' stroke-width='5' />
+      <line x1='430' y1='212' x2='430' y2='240' stroke='#3e1602' stroke-width='5' />
+      <line x1='495' y1='212' x2='495' y2='240' stroke='#3e1602' stroke-width='5' />
+      <line x1='540' y1='212' x2='540' y2='240' stroke='#3e1602' stroke-width='6' />
+
+      <!-- Cross Balustrade Detailing (Himalayan Chalet X-bracing) -->
+      <g stroke='#78350f' stroke-width='2'>
+        <line x1='108' y1='213' x2='168' y2='239' />
+        <line x1='168' y1='213' x2='108' y2='239' />
+        <line x1='173' y1='213' x2='233' y2='239' />
+        <line x1='233' y1='213' x2='173' y2='239' />
+        <line x1='238' y1='213' x2='298' y2='239' />
+        <line x1='298' y1='213' x2='238' y2='239' />
+        <line x1='303' y1='213' x2='363' y2='239' />
+        <line x1='363' y1='213' x2='303' y2='239' />
+        <line x1='368' y1='213' x2='428' y2='239' />
+        <line x1='428' y1='213' x2='368' y2='239' />
+        <line x1='433' y1='213' x2='493' y2='239' />
+        <line x1='493' y1='213' x2='433' y2='239' />
+      </g>
+    </g>
+
+    <!-- Main Steep-Pitched Gabled Alpine Roof -->
+    <g id='mainRoof'>
+      <!-- Gable Wall Triangle (Wood siding) -->
+      <polygon points='320,15 100,140 540,140' fill='url(#woodWallDark)' stroke='#451a03' stroke-width='2' />
+      
+      <!-- Gable Window / Attic Diamond Feature -->
+      <polygon points='320,65 300,90 320,115 340,90' fill='url(#windowReflection)' stroke='#290d02' stroke-width='2' />
+
+      <!-- Left Overhanging Roof Slope -->
+      <polygon points='320,8 70,148 90,154 320,18' fill='url(#roofHighlight)' />
+      <!-- Right Overhanging Roof Slope (Main Facet) -->
+      <polygon points='320,8 570,148 550,154 320,18' fill='url(#roofGrad)' />
+
+      <!-- Roof Ridge Cap -->
+      <line x1='315' y1='10' x2='325' y2='10' stroke='#0f172a' stroke-width='6' stroke-linecap='round' />
+
+      <!-- Slate Shingle Texture Lines on Roof -->
+      <g stroke='#1e293b' stroke-width='2' opacity='0.7'>
+        <line x1='120' y1='132' x2='520' y2='132' />
+        <line x1='150' y1='114' x2='490' y2='114' />
+        <line x1='185' y1='96' x2='455' y2='96' />
+        <line x1='220' y1='78' x2='420' y2='78' />
+        <line x1='260' y1='58' x2='380' y2='58' />
+        <line x1='290' y1='38' x2='350' y2='38' />
+      </g>
+
+      <!-- Decorative Wooden Carved Eaves Finial (Pahari Architecture) -->
+      <polygon points='317,2 320,-15 323,2' fill='#78350f' stroke='#451a03' stroke-width='1.5' />
+    </g>
+
+    <!-- Right Wing: Connected Secondary Mountain Cottage -->
+    <g id='rightWing'>
+      <!-- Ground Floor Stone -->
+      <rect x='540' y='285' width='280' height='95' fill='url(#stoneGrad)' stroke='#1e293b' stroke-width='2' />
+      <rect x='570' y='298' width='80' height='68' fill='url(#windowReflection)' stroke='#0f172a' stroke-width='2' />
+      <rect x='690' y='298' width='80' height='68' fill='url(#windowReflection)' stroke='#0f172a' stroke-width='2' />
+
+      <!-- Upper Timber Floor -->
+      <rect x='540' y='180' width='280' height='105' fill='url(#woodWallWarm)' stroke='#451a03' stroke-width='2' />
+      <g stroke='#5e2609' stroke-width='1.5'>
+        <line x1='540' y1='195' x2='820' y2='195' />
+        <line x1='540' y1='210' x2='820' y2='210' />
+        <line x1='540' y1='225' x2='820' y2='225' />
+        <line x1='540' y1='240' x2='820' y2='240' />
+        <line x1='540' y1='255' x2='820' y2='255' />
+        <line x1='540' y1='270' x2='820' y2='270' />
+      </g>
+
+      <!-- Upper Windows -->
+      <rect x='570' y='198' width='90' height='65' fill='url(#windowReflection)' stroke='#290d02' stroke-width='2.5' rx='2' />
+      <rect x='700' y='198' width='90' height='65' fill='url(#windowReflection)' stroke='#290d02' stroke-width='2.5' rx='2' />
+      <circle cx='615' cy='228' r='12' fill='#fef08a' opacity='0.7' filter='blur(3px)' />
+
+      <!-- Right Wing Roof -->
+      <polygon points='680,85 520,180 840,180' fill='url(#woodWallDark)' stroke='#451a03' stroke-width='2' />
+      <polygon points='680,80 500,185 860,185' fill='url(#roofGrad)' stroke='#0f172a' stroke-width='2' />
+    </g>
+
+    <!-- Left Porch Wooden Staircase down to Garden -->
+    <g id='porchStairs'>
+      <rect x='60' y='345' width='50' height='10' fill='#5c2306' stroke='#290d02' stroke-width='1.5' />
+      <rect x='45' y='355' width='65' height='10' fill='#451a03' stroke='#290d02' stroke-width='1.5' />
+      <rect x='30' y='365' width='80' height='10' fill='#3e1602' stroke='#290d02' stroke-width='1.5' />
+      <rect x='15' y='375' width='95' height='10' fill='#2e0f01' stroke='#290d02' stroke-width='1.5' />
+      <!-- Porch Handrail -->
+      <line x1='15' y1='350' x2='60' y2='320' stroke='#451a03' stroke-width='4' />
+      <line x1='15' y1='375' x2='15' y2='350' stroke='#451a03' stroke-width='3' />
+      <line x1='60' y1='345' x2='60' y2='320' stroke='#451a03' stroke-width='3' />
+    </g>
+  </g>
+
+  <!-- =========================================================================
+       8. FOREGROUND GARDEN, PATHWAY & OUTDOOR RESORT SEATING
+       ========================================================================= -->
+  <!-- Winding Flagstone Walkway across the Lawn -->
+  <g fill='#94a3b8' stroke='#475569' stroke-width='2'>
+    <path d='
+      M-50,960 
+      Q250,880 550,860 
+      T1150,780 
+      L1250,730 
+      L1330,735 
+      Q1150,820 620,910 
+      T-50,1050 Z
+    ' fill='#64748b' stroke='none' opacity='0.7' />
+
+    <!-- Irregular Himalayan Slate Pavers -->
+    <polygon points='20,980 90,950 140,970 80,1010' fill='#94a3b8' />
+    <polygon points='110,940 190,920 240,945 170,975' fill='#cbd5e1' />
+    <polygon points='220,910 310,890 360,915 280,945' fill='#94a3b8' />
+    <polygon points='340,880 430,870 480,895 400,920' fill='#cbd5e1' />
+    <polygon points='460,865 550,855 590,880 510,900' fill='#94a3b8' />
+    <polygon points='580,850 670,840 710,865 630,885' fill='#cbd5e1' />
+    <polygon points='700,835 780,825 820,850 750,870' fill='#94a3b8' />
+    <polygon points='810,820 890,805 930,830 860,855' fill='#cbd5e1' />
+    <polygon points='920,800 990,785 1030,810 970,835' fill='#94a3b8' />
+    <polygon points='1020,780 1090,765 1130,790 1070,815' fill='#cbd5e1' />
+    <polygon points='1120,760 1190,745 1230,770 1170,795' fill='#94a3b8' />
+  </g>
+
+  <!-- Flower Borders: Vibrant Mountain Rhododendrons, Marigolds & Alpine Flora -->
+  <!-- Left Garden Bed along Walkway -->
+  <g>
+    <!-- Shrub foliage -->
+    <ellipse cx='120' cy='900' rx='70' ry='35' fill='#166534' />
+    <ellipse cx='190' cy='870' rx='80' ry='38' fill='#15803d' />
+    <ellipse cx='270' cy='850' rx='75' ry='36' fill='#166534' />
+    <ellipse cx='360' cy='830' rx='70' ry='34' fill='#15803d' />
+
+    <!-- Blooming Red Rhododendrons -->
+    <circle cx='100' cy='890' r='10' fill='#ef4444' />
+    <circle cx='115' cy='880' r='8' fill='#dc2626' />
+    <circle cx='130' cy='895' r='9' fill='#ef4444' />
+    <circle cx='170' cy='860' r='11' fill='#ef4444' />
+    <circle cx='195' cy='850' r='9' fill='#b91c1c' />
+    <circle cx='210' cy='865' r='10' fill='#ef4444' />
+    <circle cx='250' cy='840' r='10' fill='#ef4444' />
+    <circle cx='280' cy='830' r='9' fill='#dc2626' />
+    <circle cx='340' cy='820' r='11' fill='#ef4444' />
+
+    <!-- Golden Marigolds & Daisies -->
+    <circle cx='140' cy='910' r='8' fill='#f59e0b' />
+    <circle cx='160' cy='900' r='7' fill='#fbbf24' />
+    <circle cx='225' cy='875' r='8' fill='#f59e0b' />
+    <circle cx='240' cy='885' r='7' fill='#fbbf24' />
+    <circle cx='300' cy='855' r='8' fill='#f59e0b' />
+    <circle cx='320' cy='845' r='8' fill='#fbbf24' />
+    <circle cx='375' cy='835' r='7' fill='#f59e0b' />
+
+    <!-- Purple Himalayan Primulas -->
+    <circle cx='180' cy='885' r='7' fill='#a855f7' />
+    <circle cx='265' cy='860' r='6' fill='#9333ea' />
+    <circle cx='350' cy='840' r='7' fill='#a855f7' />
+  </g>
+
+  <!-- Right Flower Bed by Lawn Retaining Wall -->
+  <g>
+    <ellipse cx='1050' cy='730' rx='90' ry='30' fill='#166534' />
+    <ellipse cx='1170' cy='710' rx='100' ry='32' fill='#15803d' />
+    <ellipse cx='1280' cy='695' rx='80' ry='28' fill='#166534' />
+
+    <!-- Blooms -->
+    <circle cx='1020' cy='725' r='9' fill='#ef4444' />
+    <circle cx='1050' cy='720' r='8' fill='#f59e0b' />
+    <circle cx='1080' cy='730' r='9' fill='#ef4444' />
+    <circle cx='1130' cy='705' r='10' fill='#f59e0b' />
+    <circle cx='1160' cy='715' r='9' fill='#ef4444' />
+    <circle cx='1190' cy='700' r='8' fill='#a855f7' />
+    <circle cx='1240' cy='690' r='10' fill='#ef4444' />
+    <circle cx='1270' cy='700' r='9' fill='#f59e0b' />
+  </g>
+
+  <!-- Outdoor Mountain View Patio Seating (Right Terrace Lawn) -->
+  <g id='patioSeating' transform='translate(1220, 720)'>
+    <!-- Patio Table -->
+    <ellipse cx='80' cy='70' rx='28' ry='12' fill='#000000' opacity='0.25' filter='blur(3px)' />
+    <rect x='76' y='45' width='8' height='25' fill='#5c2306' />
+    <ellipse cx='80' cy='45' rx='34' ry='14' fill='#b45309' stroke='#78350f' stroke-width='2' />
+    <!-- Tea Cups on Table -->
+    <circle cx='70' cy='44' r='4' fill='#ffffff' />
+    <circle cx='90' cy='43' r='4' fill='#ffffff' />
+
+    <!-- Wooden Armchair 1 (Left of table) -->
+    <ellipse cx='30' cy='65' rx='22' ry='9' fill='#000000' opacity='0.22' filter='blur(2px)' />
+    <!-- Chair Legs -->
+    <line x1='15' y1='52' x2='15' y2='65' stroke='#3e1602' stroke-width='3' />
+    <line x1='45' y1='52' x2='45' y2='65' stroke='#3e1602' stroke-width='3' />
+    <!-- Slanted Backrest -->
+    <line x1='10' y1='25' x2='15' y2='52' stroke='#78350f' stroke-width='5' stroke-linecap='round' />
+    <!-- Seat Cushion -->
+    <rect x='15' y='46' width='30' height='8' rx='2' fill='#fef08a' stroke='#ca8a04' stroke-width='1.5' />
+    <!-- Armrest -->
+    <line x1='8' y1='38' x2='45' y2='46' stroke='#5c2306' stroke-width='3.5' stroke-linecap='round' />
+
+    <!-- Wooden Armchair 2 (Right of table) -->
+    <ellipse cx='130' cy='65' rx='22' ry='9' fill='#000000' opacity='0.22' filter='blur(2px)' />
+    <line x1='115' y1='52' x2='115' y2='65' stroke='#3e1602' stroke-width='3' />
+    <line x1='145' y1='52' x2='145' y2='65' stroke='#3e1602' stroke-width='3' />
+    <line x1='150' y1='25' x2='145' y2='52' stroke='#78350f' stroke-width='5' stroke-linecap='round' />
+    <rect x='115' y='46' width='30' height='8' rx='2' fill='#fef08a' stroke='#ca8a04' stroke-width='1.5' />
+    <line x1='152' y1='38' x2='115' y2='46' stroke='#5c2306' stroke-width='3.5' stroke-linecap='round' />
+  </g>
+
+  <!-- Cast-Iron Garden Lamp Post on the Lawn -->
+  <g transform='translate(680, 770)'>
+    <!-- Shadow -->
+    <ellipse cx='10' cy='85' rx='14' ry='5' fill='#000000' opacity='0.3' filter='blur(2px)' />
+    <!-- Base & Post -->
+    <rect x='7' y='80' width='16' height='7' rx='2' fill='#1e293b' />
+    <rect x='12' y='18' width='6' height='64' fill='#334155' stroke='#0f172a' stroke-width='1' />
+    <!-- Cross Arm -->
+    <line x1='2' y1='32' x2='28' y2='32' stroke='#1e293b' stroke-width='3' stroke-linecap='round' />
+    <!-- Lantern Fixture -->
+    <polygon points='3,18 27,18 22,0 8,0' fill='#fef08a' stroke='#0f172a' stroke-width='2' />
+    <!-- Warm Ambient Lantern Glow -->
+    <circle cx='15' cy='9' r='14' fill='#facc15' opacity='0.6' filter='blur(4px)' />
+    <polygon points='6,0 15,-10 24,0' fill='#0f172a' />
+  </g>
+
+  <!-- 9. Elegant Photography Tone Map / Sun Vignette -->
+  <rect width='1600' height='1000' fill='url(#vignette)' pointer-events='none' />
+</svg>

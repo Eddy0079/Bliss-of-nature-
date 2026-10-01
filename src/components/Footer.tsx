@@ -7,6 +7,7 @@ import {
   Instagram, 
   Facebook, 
   Youtube, 
+  MessageCircle,
   ArrowUp,
   Heart
 } from 'lucide-react';
@@ -45,11 +46,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectDestination 
 
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/bliss.of.nature.resort?stkn=Zmh6dXR0czdqNHBj"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#16745A] text-white/80 hover:text-white flex items-center justify-center transition-colors"
+                className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#E1306C] text-white/80 hover:text-white flex items-center justify-center transition-colors"
                 aria-label="Instagram"
+                title="Follow Bliss of Nature on Instagram"
               >
                 <Instagram className="w-4 h-4" />
               </a>
@@ -57,17 +59,29 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectDestination 
                 href="https://www.facebook.com/profile.php?id=61594779811083"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#16745A] text-white/80 hover:text-white flex items-center justify-center transition-colors"
+                className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#1877F2] text-white/80 hover:text-white flex items-center justify-center transition-colors"
                 aria-label="Facebook"
+                title="Follow BON Holidays on Facebook"
               >
                 <Facebook className="w-4 h-4" />
+              </a>
+              <a
+                href="https://wa.me/919149074344"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#25D366] text-white/80 hover:text-white flex items-center justify-center transition-colors"
+                aria-label="WhatsApp"
+                title="Chat with BON Holidays on WhatsApp"
+              >
+                <MessageCircle className="w-4 h-4" />
               </a>
               <a
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#16745A] text-white/80 hover:text-white flex items-center justify-center transition-colors"
+                className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#FF0000] text-white/80 hover:text-white flex items-center justify-center transition-colors"
                 aria-label="YouTube"
+                title="Subscribe on YouTube"
               >
                 <Youtube className="w-4 h-4" />
               </a>

@@ -15,9 +15,9 @@ export const RESORTS_DATA: Resort[] = [
     heroImage: '/images/bliss-of-nature-1.jpg',
     gallery: [
       '/images/bliss-of-nature-1.jpg',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80',
+      '/images/bliss-of-nature-2.jpg',
+      '/images/bliss-of-nature-3.jpg',
+      '/images/bliss-of-nature-4.jpg',
       'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1507038772120-7ffe76f79d04?auto=format&fit=crop&w=1200&q=80'
     ],
@@ -54,7 +54,7 @@ export const RESORTS_DATA: Resort[] = [
         capacity: '3 Adults or 2 Adults + 2 Kids',
         bed: 'King Bed + Daybed',
         pricePerNight: 9200,
-        image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80',
+        image: '/images/bliss-of-nature-2.jpg',
         description: 'Chiseled river-stone villa situated beside our babbling brook with a private plunge deck and sunken stone bath.',
         amenities: ['Private Stream Deck', 'Sunken Natural Stone Tub', 'Mini Bar with Local Mountain Juices', 'Fireplace']
       },
